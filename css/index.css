@@ -1,0 +1,564 @@
+/* ================================================================
+   index.css — index.html 전용 스타일
+   공통 스타일(변수·리셋·사이드바·모달)은 common.css 참고
+   ================================================================ */
+
+/* ======= 메인 레이아웃 ======= */
+/*
+  구조 설명:
+  - .hero: position fixed (항상 배경에 고정)
+  - .main-content: 사이드바 오른쪽, 세로 스크롤 컨테이너
+  - .scroll-stage: hero 높이만큼의 빈 공간 (스크롤 1단계 거리)
+  - .content-wrapper: sticky로 60px 지점에서 멈춤 + 내부 overflow-y: auto
+*/
+.main-content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  /* 바깥 스크롤바 숨김 (슬라이드 동작은 유지) */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge */
+}
+.main-content::-webkit-scrollbar {
+  display: none;                /* Chrome / Safari */
+}
+
+/* ======= 히어로 섹션 (배경 고정) ======= */
+.hero {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  height: var(--hero-height);
+  z-index: 0;
+  background-image:
+    /* linear-gradient(to bottom, rgba(0, 10, 30, 0.25) 0%, rgba(0, 10, 30, 0.6) 100%), */
+    url('../images/hero_background.png');
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px 48px 60px;
+  overflow: hidden;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 999px;
+  padding: 7px 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.05));
+  border-radius: 10px;
+  padding: 10px 80px 10px 4px;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  max-width: 680px;
+}
+
+/* ======= scroll-stage 제거 (JS 방식으로 전환) ======= */
+.scroll-stage { display: none; }
+
+/* ======= 흰색 콘텐츠 카드 ======= */
+/*
+  position: fixed로 hero 아래 고정.
+  JS가 top 값을 조절하며 슬라이드 업 / 내부 스크롤 전환을 제어함.
+*/
+.content-wrapper {
+  position: fixed;
+  top: var(--hero-height);      /* 초기값: hero 바로 아래 (JS가 업데이트) */
+  left: var(--sidebar-width);
+  right: 0;
+  bottom: 0;
+  overflow: hidden;             /* 스크롤은 내부 .content-scroll이 담당 */
+  background: #ffffff;
+  border-radius: 24px 24px 0 0;
+  z-index: 1;
+}
+
+/* 실제 스크롤 컨테이너 — 스크롤바가 이 안에서 생김 */
+.content-scroll {
+  height: 100%;
+  overflow-y: auto;
+  padding: 56px 60px 80px;
+}
+
+/* ======= 히어로 요소 전환 효과 ======= */
+.hero-badge {
+  transition: opacity 0.15s ease;
+}
+
+.hero-subtitle {
+  transition: opacity 0.15s ease;
+}
+
+.hero-title {
+  /* font-size는 JS가 직접 보간 */
+  transition: none;
+}
+
+/* ======= 섹션 공통 ======= */
+.section-title {
+  color: var(--accent);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* ======= 공지사항 ======= */
+.announcements { margin-bottom: 60px; }
+
+.announcement-list { list-style: none; }
+
+.announcement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.announcement-item:first-of-type { border-top: 1px solid var(--border); }
+
+.announcement-icon {
+  color: var(--accent);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.announcement-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.announcement-meta {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.announcement-item:hover { background: #f9f9f9; }
+
+.ann-chevron {
+  color: #ccc;
+  font-size: 1.4rem;
+  align-self: center;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ======= 캘린더 + 타임테이블 ======= */
+.calendar-timetable-row {
+  display: flex;
+  gap: 36px;
+  margin-bottom: 48px;
+  align-items: stretch;
+}
+
+/* ======= 캘린더 위젯 (새 디자인) ======= */
+.calendar-widget {
+  flex: 0 0 60%;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* 상단 네이비 헤더 */
+.cal-header-new {
+  background: var(--sidebar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.cal-month-label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.cal-month-label em {
+  font-style: normal;
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.cal-nav-new {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 6px;
+  transition: opacity 0.2s;
+}
+.cal-nav-new:hover:not(.cal-nav-disabled) { opacity: 1; color: #fff; }
+.cal-nav-disabled { opacity: 0.25 !important; cursor: default; }
+
+/* 캘린더 그리드 본문 */
+.cal-body-new {
+  padding: 0;
+}
+
+.calendar-grid-new {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* 요일 헤더 */
+.cal-day-name {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  padding: 8px 6px 6px;
+  border: 1px solid var(--border);
+  text-align: left;
+  background: #fafafa;
+}
+
+/* 날짜 셀 */
+.cal-cell {
+  border: 1px solid var(--border);
+  vertical-align: top;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cal-cell-inner {
+  min-height: 90px;
+  padding: 8px 8px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.cal-cell:hover:not(.cal-cell-empty) { background: #f0f4ff; }
+
+.cal-cell-empty {
+  background: #fafafa;
+  cursor: default;
+}
+
+.cal-cell-today { background: rgba(67, 195, 103, 0.14); }
+
+.cal-cell-today .cal-date-num {
+  font-weight: 800;
+  color: #2a9e4f;
+}
+
+.cal-date-num {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ── 셀 내부 모듈 띠 ── */
+.cal-cell-band-first {
+  position: relative;
+  z-index: 2;           /* label이 이웃 셀 위에 렌더되도록 */
+}
+
+.cal-band {
+  background: #bdd7f5;
+  height: 20px;
+  position: relative;
+  overflow: visible;    /* label이 셀 밖으로 넘쳐도 렌더 허용 */
+  margin: 0 -8px;
+  flex-shrink: 0;
+}
+
+/* 시작 셀: 왼쪽 둥글게 */
+.cal-band-start { margin-left: 2px; border-radius: 4px 0 0 4px; }
+/* 끝 셀: 오른쪽 둥글게 */
+.cal-band-end   { margin-right: 2px; border-radius: 0 4px 4px 0; }
+/* 단독 셀 */
+.cal-band-solo  { margin-left: 2px; margin-right: 2px; border-radius: 4px; }
+/* 중간 셀: 각진 형태 */
+.cal-band-cont  { border-radius: 0; }
+
+.cal-band-label {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #1a3a6a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  /* width는 JS가 span * cellWidth 픽셀로 설정 */
+}
+
+/* ── 필드트립 태그 ── */
+.cal-fieldtrip {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: #c0392b;
+  letter-spacing: 0.02em;
+}
+
+.timetable-widget {
+  flex: 1;
+  background: var(--timetable-bg);
+  border-radius: 16px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timetable-title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timetable-date {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-left: 4px;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.timetable-section-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.timetable-section-label:first-of-type {
+  margin-top: 0;
+}
+
+.timetable-empty {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  padding: 8px 0;
+}
+
+.timetable-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timetable-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timetable-bar {
+  width: 4px;
+  height: 50px;
+  background: #4a9eff;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.timetable-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.timetable-card .time {
+  color: #fff;
+  font-size: 0.83rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.timetable-card .event {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.83rem;
+}
+
+/* ======= 연락처 ======= */
+.contact-cards-row {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-card {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.contact-role-badge {
+  display: inline-block;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+
+.contact-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+
+.contact-detail-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-detail-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: #555;
+}
+
+.contact-icon {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+/* ================================================================
+   모바일 반응형  ≤ 768px
+   ================================================================ */
+@media (max-width: 768px) {
+
+  /* 메인 컨텐츠: 사이드바 마진 제거 */
+  .main-content {
+    margin-left: 0;
+    height: 100dvh;
+  }
+
+  /* 히어로: 전체 너비, 패딩 축소 */
+  .hero {
+    left: 0;
+    height: 52vh;
+    padding: 20px 20px 40px;
+  }
+
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+    margin-bottom: 12px;
+  }
+
+  .hero-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem;
+    padding: 8px 20px 8px 4px;
+    max-width: 100%;
+  }
+
+  /* 흰 카드: 히어로 위에 더 많이 겹치도록 */
+  .content-wrapper {
+    left: 0;
+    top: 38vh;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .content-scroll {
+    padding: 28px 20px 100px; /* 하단 bottom-nav 공간 확보 */
+  }
+
+  /* 섹션 타이틀 */
+  .section-title { font-size: 1.1rem; }
+
+  /* 캘린더 + 타임테이블: 세로 스택 */
+  .calendar-timetable-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .calendar-widget {
+    flex: none;
+    width: 100%;
+  }
+
+  .timetable-widget {
+    width: 100%;
+  }
+
+  /* 캘린더 셀 최소 높이 줄이기 */
+  .cal-cell-inner { min-height: 60px; }
+
+  /* 연락처 카드: 세로 스택 */
+  .contact-cards-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* 공지사항 */
+  .announcement-item { padding: 12px 0; }
+}

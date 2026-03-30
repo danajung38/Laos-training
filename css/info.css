@@ -1,0 +1,460 @@
+/* ================================================================
+   info.css — Info 페이지 전용 스타일
+   ================================================================ */
+
+/* ======= 레이아웃 ======= */
+.info-main {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  width: calc(100% - var(--sidebar-width));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ======= 히어로 ======= */
+.info-hero {
+  height: 190px;
+  background: url('../images/road.png') center / cover no-repeat;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 40px 28px;
+}
+
+/* 히어로 어두운 오버레이 */
+.info-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+  pointer-events: none;
+}
+
+.info-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.info-hero-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.info-hero-sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+}
+
+/* ======= 콘텐츠 영역 ======= */
+.info-content {
+  flex: 1;
+  background: #f4f6f9;
+  overflow-y: auto;
+}
+
+.info-scroll {
+  padding: 28px 45px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ======= 카드 행 ======= */
+.info-row {
+  display: grid;
+  gap: 16px;
+}
+
+.info-row-3 { grid-template-columns: repeat(3, 1fr); }
+.info-row-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* ======= 공통 카드 ======= */
+.info-card {
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* ======= 이미지 카드 ======= */
+.info-card-img {
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* 개별 카드 배경 이미지 */
+.info-card[data-card="health"]      { background-image: url('../images/hospital.png'); }
+.info-card[data-card="life"]        { background-image: url('../images/sky.png'); }
+.info-card[data-card="korea"]       { background-image: url('../images/korea.png'); }
+.info-card[data-card="facilities"]  { background-image: url('../images/cafeteria.png'); }
+
+/* 라이트 카드 (Emergency Info — 이미지 없음) */
+.info-card-light {
+  background: linear-gradient(135deg, #dce8ff 0%, #b8d0ff 100%);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-card-light-icon {
+  font-size: 2.4rem;
+}
+
+/* 이미지 카드 오버레이 */
+.info-card-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(216, 216, 216, 0.35);
+  background-image: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+}
+
+/* 카드 텍스트 */
+.info-card-name {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 14px 18px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+/* 라이트 카드 텍스트 */
+.info-card-light .info-card-name {
+  position: static;
+  color: #1a3a6b;
+  text-shadow: none;
+  padding: 0;
+}
+
+/* ======= 유틸리티 카드 ======= */
+.info-card-util {
+  height: 80px;
+  background: #fff3e0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 28px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.info-card-util:hover {
+  background: #ffe0b2;
+  transform: translateY(-2px);
+}
+
+.info-util-icon { font-size: 1.6rem; }
+
+.info-util-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #5d4037;
+}
+
+/* ================================================================
+   INFO 모달
+   ================================================================ */
+.info-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+.info-modal-backdrop.open {
+  display: flex;
+}
+
+.info-modal {
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+}
+
+/* 모달 헤더 */
+.info-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.info-modal-title {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* 줌 컨트롤 */
+.info-zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 4px 10px;
+}
+
+.zoom-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  line-height: 1;
+}
+
+.zoom-btn:hover { background: #e0e0e0; }
+
+.zoom-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #555;
+  min-width: 38px;
+  text-align: center;
+}
+
+.info-modal-close {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.info-modal-close:hover { background: #e0e0e0; }
+
+/* PDF 탭 바 */
+.info-pdf-tabs {
+  display: none;
+  gap: 6px;
+  padding: 10px 24px;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+.info-pdf-tabs.visible {
+  display: flex;
+}
+
+.pdf-tab {
+  background: #eeeeee;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.pdf-tab:hover { background: #e0e0e0; }
+
+.pdf-tab.active {
+  background: #1a3a6b;
+  color: #fff;
+}
+
+/* 모달 바디 */
+.info-modal-body {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.info-modal-scroll-area {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.info-zoom-box {
+  transform-origin: top center;
+  display: flex;
+  justify-content: center;
+  /* JS가 zoom 값 설정 */
+}
+
+/* 이미지 뷰어 */
+.info-img-view {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 텍스트 콘텐츠 */
+.info-text-content {
+  padding: 32px 36px;
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: #444;
+}
+
+.info-text-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 24px 0 10px;
+}
+
+.info-text-content h3:first-child { margin-top: 0; }
+
+.info-text-content p { margin-bottom: 8px; }
+
+.info-text-content ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.info-text-content li { margin-bottom: 5px; }
+
+.info-text-content .info-tag {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1a3a6b;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* 위피 QR 카드 */
+.wifi-card {
+  background: #f8f9fa;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  border: 1px solid #eee;
+}
+
+.wifi-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.wifi-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.88rem;
+}
+
+.wifi-row:last-child { border-bottom: none; }
+
+.wifi-row span:first-child { color: #888; }
+.wifi-row span:last-child { font-weight: 600; color: #333; }
+
+/* ================================================================
+   모바일 반응형  ≤ 768px
+   ================================================================ */
+@media (max-width: 768px) {
+
+  .info-main {
+    margin-left: 0;
+    width: 100%;
+    height: 100dvh;
+  }
+
+  .info-hero {
+    height: 140px;
+    padding: 0 20px 20px;
+  }
+
+  .info-hero-title { font-size: 1.8rem; }
+  .info-hero-sub   { font-size: 0.85rem; }
+
+  .info-scroll {
+    padding: 20px 16px 100px;
+    gap: 12px;
+  }
+
+  .info-row-3 { grid-template-columns: repeat(2, 1fr); }
+
+  /* 3번째 카드는 2열 전체 차지 */
+  .info-row-3 .info-card:nth-child(3) {
+    grid-column: span 2;
+    height: 110px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 24px;
+    gap: 16px;
+  }
+
+  .info-row-3 .info-card:nth-child(3) .info-card-light-icon { font-size: 2rem; }
+
+  .info-card-img { height: 150px; }
+
+  .info-card-util { height: 70px; padding: 0 20px; }
+
+  /* 모달 */
+  .info-modal-backdrop { padding: 0; align-items: flex-end; }
+
+  .info-modal {
+    border-radius: 20px 20px 0 0;
+    height: 92dvh;
+    max-width: 100%;
+  }
+
+  .info-modal-header { padding: 16px 18px; }
+  .info-modal-title  { font-size: 1rem; }
+
+  .info-pdf-frame { height: 65vh; }
+
+  .info-text-content { padding: 24px 20px; }
+}

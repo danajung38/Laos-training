@@ -1,0 +1,328 @@
+/* ================================================================
+   curriculum.css — Curriculum 페이지 전용 스타일
+   ================================================================ */
+
+/* ── 메인 레이아웃 ── */
+.curr-main {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  width: calc(100% - var(--sidebar-width));
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── 페이지 타이틀 ── */
+.curr-header {
+  padding: 32px 48px 0;
+  flex-shrink: 0;
+}
+
+.curr-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1a2e4a;
+  letter-spacing: -0.01em;
+}
+
+/* ── 서브 헤더바 ── */
+.curr-subbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 10px 48px;
+  background: linear-gradient(90deg, #1a3a6b 0%, #3a6fc4 60%, #a8c8f0 100%);
+  flex-shrink: 0;
+}
+
+.curr-subbar-icon {
+  font-size: 1.05rem;
+}
+
+.curr-subbar-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+/* ── 스크롤 콘텐츠 영역 ── */
+.curr-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px 48px 60px;
+}
+
+/* ── 월 탭 버튼 영역 ── */
+.curr-month-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.curr-month-btn {
+  position: relative;
+  padding: 8px 28px;
+  border-radius: 999px;
+  border: 1.5px solid #1a2e4a;
+  background: #ffffff;
+  color: #1a2e4a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+.curr-month-btn:hover {
+  background: #eef3fb;
+}
+
+.curr-month-btn.active {
+  background: #1a2e4a;
+  color: #ffffff;
+  border-color: #1a2e4a;
+}
+
+/* 선택된 탭 아래 삼각형 인디케이터 */
+.curr-month-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid #1a2e4a;
+}
+
+/* ── 토픽 라벨 ── */
+.curr-topic {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1a2e4a;
+  margin: 20px 0 24px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ── 주차 카드 리스트 ── */
+.curr-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── 개별 카드 ── */
+.curr-card {
+  border-radius: 16px;
+  background: #ddeaf8;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.curr-card:hover {
+  box-shadow: 0 4px 18px rgba(26, 46, 74, 0.12);
+}
+
+/* 카드 헤더 (항상 보이는 부분) */
+.curr-card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* W1, W2... 배지 */
+.curr-week-badge {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(145deg, #1a3a6b, #2d5fa8);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(26, 58, 107, 0.35);
+  letter-spacing: 0.02em;
+}
+
+/* 카드 텍스트 */
+.curr-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.curr-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a2e4a;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.curr-card-dates {
+  font-size: 0.8rem;
+  color: #5a7a9e;
+  margin-bottom: 8px;
+}
+
+.curr-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.curr-tag {
+  font-size: 0.75rem;
+  color: #2d5fa8;
+  font-weight: 500;
+}
+
+/* 아코디언 화살표 */
+.curr-card-arrow {
+  font-size: 0.8rem;
+  color: #5a7a9e;
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.curr-card.open .curr-card-arrow {
+  transform: rotate(180deg);
+}
+
+/* 아코디언 상세 내용 */
+.curr-card-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 28px;           /* 패딩은 항상 고정 — 트랜지션 안 함 */
+  background: #c8dcf0;
+}
+
+.curr-card.open .curr-card-detail {
+  padding: 20px 28px 24px;   /* JS가 maxHeight 측정 전에 이미 적용됨 */
+}
+
+.curr-card-detail-inner {
+  font-size: 0.88rem;
+  color: #2a3f5a;
+  line-height: 1.6;
+}
+
+/* ── 담당 교수 ── */
+.curr-professor {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2d5fa8;
+  margin-bottom: 16px;
+  letter-spacing: 0.01em;
+}
+
+/* ── 세션 목록 ── */
+.curr-session-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.curr-session-item {
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.curr-session-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+/* 강의 타입 뱃지 (색상은 JS 인라인으로 설정) */
+.curr-session-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.curr-session-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a2e4a;
+}
+
+.curr-session-sub {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: #5a7a9e;
+  margin-bottom: 5px;
+}
+
+.curr-session-desc {
+  font-size: 0.82rem;
+  color: #4a6a8a;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.curr-card-detail-inner ul {
+  padding-left: 18px;
+  margin-top: 4px;
+}
+
+.curr-card-detail-inner li {
+  margin-bottom: 4px;
+}
+
+/* ================================================================
+   모바일 반응형  ≤ 768px
+   ================================================================ */
+@media (max-width: 768px) {
+
+  .curr-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .curr-header { padding: 24px 20px 0; }
+
+  .curr-title { font-size: 1.8rem; }
+
+  .curr-subbar { padding: 10px 20px; }
+
+  .curr-content { padding: 24px 20px 100px; /* 하단 bottom-nav 공간 확보 */ }
+
+  .curr-month-tabs { gap: 10px; }
+
+  .curr-month-btn {
+    padding: 7px 18px;
+    font-size: 0.82rem;
+  }
+
+  .curr-card-header { padding: 16px 18px; gap: 14px; }
+
+  .curr-week-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 0.85rem;
+  }
+
+  .curr-card-detail { padding: 0 18px; }
+  .curr-card.open .curr-card-detail { padding: 16px 18px 20px; }
+}

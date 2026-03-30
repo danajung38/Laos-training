@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info — Lao-Korea Entrepreneurship Bridge</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/info.css">
+</head>
+<body>
+
+  <!-- ========== 사이드바 ========== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">LOGO</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item" onclick="location.href='index.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_home.png" alt="home">
+            <img class="nav-icon-active"  src="images/icon_home_active.png" alt="home">
+          </span>
+          <span>HOME</span>
+        </li>
+        <li class="nav-item" onclick="location.href='curriculum.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_calendar.png" alt="curriculum">
+            <img class="nav-icon-active"  src="images/icon_calendar_active.png" alt="curriculum">
+          </span>
+          <span>CURRICULUM</span>
+        </li>
+        <li class="nav-item">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_book.png" alt="study">
+            <img class="nav-icon-active"  src="images/icon_book_active.png" alt="study">
+          </span>
+          <span>STUDY</span>
+        </li>
+        <li class="nav-item" onclick="location.href='notifications.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_bell.png" alt="notifications">
+            <img class="nav-icon-active"  src="images/icon_bell_active.png" alt="notifications">
+          </span>
+          <span>NOTIFICATIONS</span>
+        </li>
+        <li class="nav-item active">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_info.png" alt="info">
+            <img class="nav-icon-active"  src="images/icon_info_active.png" alt="info">
+          </span>
+          <span>INFO</span>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ========== 메인 영역 ========== -->
+  <main class="info-main">
+
+    <!-- 히어로 배경 -->
+    <div class="info-hero">
+      <div class="info-hero-inner">
+        <h1 class="info-hero-title">INFO</h1>
+        <p class="info-hero-sub">Your Guidebook</p>
+      </div>
+    </div>
+
+    <!-- 콘텐츠 -->
+    <div class="info-content">
+      <div class="info-scroll">
+
+        <!-- Row 1: 작은 이미지 카드 3개 -->
+        <div class="info-row info-row-3">
+
+          <div class="info-card info-card-img" data-card="health">
+            <div class="info-card-overlay"></div>
+            <span class="info-card-name">Health &amp; Safety</span>
+          </div>
+
+          <div class="info-card info-card-img" data-card="life">
+            <div class="info-card-overlay"></div>
+            <span class="info-card-name">Life in KMU</span>
+          </div>
+
+          <div class="info-card info-card-img info-card-light" data-card="emergency">
+            <span class="info-card-light-icon">🚨</span>
+            <span class="info-card-name">Emergency Info</span>
+          </div>
+
+        </div>
+
+        <!-- Row 2: 넓은 이미지 카드 2개 -->
+        <div class="info-row info-row-2">
+
+          <div class="info-card info-card-img" data-card="korea">
+            <div class="info-card-overlay"></div>
+            <span class="info-card-name">Living in Korea</span>
+          </div>
+
+          <div class="info-card info-card-img" data-card="facilities">
+            <div class="info-card-overlay"></div>
+            <span class="info-card-name">Campus Facilities</span>
+          </div>
+
+        </div>
+
+        <!-- Row 3: 유틸리티 카드 2개 -->
+        <div class="info-row info-row-2">
+
+          <div class="info-card info-card-util" data-card="map">
+            <span class="info-util-icon">🗺️</span>
+            <span class="info-util-name">Campus Map</span>
+          </div>
+
+          <div class="info-card info-card-util" data-card="wifi">
+            <span class="info-util-icon">📶</span>
+            <span class="info-util-name">Wifi</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== INFO 모달 ========== -->
+  <div class="info-modal-backdrop" id="infoModalBackdrop">
+    <div class="info-modal" id="infoModal">
+
+      <div class="info-modal-header">
+        <h2 class="info-modal-title" id="infoModalTitle"></h2>
+        <div class="info-zoom-controls">
+          <button class="zoom-btn" id="btnZoomOut" title="축소">−</button>
+          <span class="zoom-label" id="zoomLabel">100%</span>
+          <button class="zoom-btn" id="btnZoomIn" title="확대">+</button>
+        </div>
+        <button class="info-modal-close" id="infoModalClose">✕</button>
+      </div>
+
+      <!-- Campus Facilities용 PDF 탭 -->
+      <!-- 탭은 JS에서 동적으로 생성 -->
+      <div class="info-pdf-tabs" id="infoPdfTabs"></div>
+
+      <div class="info-modal-body">
+        <div class="info-modal-scroll-area" id="infoScrollArea">
+          <div class="info-zoom-box" id="infoZoomBox">
+            <div id="infoModalContent"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== 하단 내비 (모바일 전용) ========== -->
+  <nav class="bottom-nav">
+    <a class="bottom-nav-item" href="index.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_home_mobile.png" alt="home">
+        <img class="nav-icon-active"  src="images/icon_home_mobile_active.png" alt="home">
+      </span>
+      <span class="bottom-nav-label">Home</span>
+    </a>
+    <a class="bottom-nav-item" href="curriculum.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_curric_mobile.png" alt="curriculum">
+        <img class="nav-icon-active"  src="images/icon_curric_mobile_active.png" alt="curriculum">
+      </span>
+      <span class="bottom-nav-label">Curric</span>
+    </a>
+    <a class="bottom-nav-item" href="#">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_book_mobile.png" alt="study">
+        <img class="nav-icon-active"  src="images/icon_book_mobile_active.png" alt="study">
+      </span>
+      <span class="bottom-nav-label">Study</span>
+    </a>
+    <a class="bottom-nav-item" href="notifications.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_bell_mobile.png" alt="notifications">
+        <img class="nav-icon-active"  src="images/icon_bell_mobile_active.png" alt="notifications">
+      </span>
+      <span class="bottom-nav-label">Announce</span>
+    </a>
+    <a class="bottom-nav-item active" href="info.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_info_mobile.png" alt="info">
+        <img class="nav-icon-active"  src="images/icon_info_mobile_active.png" alt="info">
+      </span>
+      <span class="bottom-nav-label">Info</span>
+    </a>
+  </nav>
+
+  <script src="js/info.js" defer></script>
+</body>
+</html>

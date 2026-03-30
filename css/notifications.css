@@ -1,0 +1,225 @@
+/* ================================================================
+   notifications.css — Notifications 페이지 전용 스타일
+   ================================================================ */
+
+/* ── 메인 레이아웃 ── */
+.notif-main {
+  margin-left: var(--sidebar-width);
+  flex: 1;                          /* body flex-container에서 남은 너비 전부 차지 */
+  width: calc(100% - var(--sidebar-width));
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 배경: 지구 이미지 + 어두운 오버레이 ── */
+.notif-bg {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #040911; /* 기본 dark fallback */
+}
+
+/* 지구 placeholder 이미지 레이어 */
+.notif-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/hero_background.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;   /* 어둡게 */
+}
+
+/* 위→아래 그라디언트 오버레이로 가독성 확보 */
+.notif-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(10, 22, 40, 0.55) 0%,
+    rgba(10, 22, 40, 0.30) 60%,
+    rgba(10, 22, 40, 0.70) 100%
+  );
+}
+
+/* ── 스크롤 콘텐츠 영역 ── */
+.notif-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 52px 60px 80px;
+}
+
+/* ── 페이지 헤더 ── */
+.notif-page-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.notif-page-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.notif-count {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.50);
+  letter-spacing: 0.02em;
+}
+
+/* ── 공지 카드 목록 ── */
+.notif-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+/* ── 개별 카드 ── */
+.notif-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  /* 투명도 85%, 둥근 모서리, 그림자 */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 22px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.18),
+    0 1px 4px rgba(0, 0, 0, 0.10);
+
+  padding: 20px 28px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.notif-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.22),
+    0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ── 아이콘 박스 (PNG 자체에 배경 포함) ── */
+.notif-icon-box {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: flex-start;   /* 카드 상단에 고정 */
+  margin-top: 2px;
+}
+
+.notif-icon-box img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  /* filter 제거 — PNG에 이미 핑크 배경+흰 아이콘 포함 */
+}
+
+/* ── 카드 텍스트 ── */
+.notif-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-card-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 7px;
+  line-height: 1.35;
+}
+
+.notif-card-meta {
+  font-size: 0.74rem;
+  color: #aaaaaa;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* ── 페이지네이션 ── */
+.notif-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.notif-page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.50);
+  background: transparent;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.notif-page-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.notif-page-btn.active {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: #fff;
+}
+
+/* ================================================================
+   모바일 반응형  ≤ 768px
+   ================================================================ */
+@media (max-width: 768px) {
+
+  .notif-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .notif-bg {
+    left: 0;
+  }
+
+  .notif-content {
+    padding: 36px 20px 100px; /* 하단 bottom-nav 공간 확보 */
+  }
+
+  .notif-page-title { font-size: 1.8rem; }
+
+  .notif-card {
+    padding: 16px 18px;
+    gap: 14px;
+  }
+
+  .notif-icon-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .notif-icon-box img {
+    width: 44px;
+    height: 44px;
+  }
+}

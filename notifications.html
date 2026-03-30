@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications – Lao-Korea Entrepreneurship Bridge</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/notifications.css">
+</head>
+<body>
+
+  <!-- ========== 사이드바 ========== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">LOGO</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item" onclick="location.href='index.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_home.png" alt="home">
+            <img class="nav-icon-active"  src="images/icon_home_active.png" alt="home">
+          </span>
+          <span>HOME</span>
+        </li>
+        <li class="nav-item" onclick="location.href='curriculum.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_calendar.png" alt="curriculum">
+            <img class="nav-icon-active"  src="images/icon_calendar_active.png" alt="curriculum">
+          </span>
+          <span>CURRICULUM</span>
+        </li>
+        <li class="nav-item">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_book.png" alt="study">
+            <img class="nav-icon-active"  src="images/icon_book_active.png" alt="study">
+          </span>
+          <span>STUDY</span>
+        </li>
+        <li class="nav-item active">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_bell.png" alt="notifications">
+            <img class="nav-icon-active"  src="images/icon_bell_active.png" alt="notifications">
+          </span>
+          <span>NOTIFICATIONS</span>
+        </li>
+        <li class="nav-item" onclick="location.href='info.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_info.png" alt="info">
+            <img class="nav-icon-active"  src="images/icon_info_active.png" alt="info">
+          </span>
+          <span>INFO</span>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ========== 메인 영역 ========== -->
+  <main class="notif-main">
+
+    <!-- 히어로 배경 -->
+    <div class="notif-bg"></div>
+
+    <!-- 콘텐츠 -->
+    <div class="notif-content">
+
+      <!-- 페이지 제목 -->
+      <div class="notif-page-header">
+        <h1 class="notif-page-title">Announcements</h1>
+        <span class="notif-count" id="notifCount"></span>
+      </div>
+
+      <!-- 공지 카드 목록 -->
+      <ul class="notif-list" id="notifList"></ul>
+
+      <!-- 페이지네이션 -->
+      <div class="notif-pagination" id="notifPagination"></div>
+
+    </div>
+  </main>
+
+  <!-- ========== 공지 모달 (index.css의 ann-modal 재사용) ========== -->
+  <div class="ann-modal-backdrop" id="annModalBackdrop">
+    <div class="ann-modal">
+      <div class="ann-modal-header">
+        <span class="ann-modal-icon" id="annModalIcon"></span>
+        <div>
+          <p class="ann-modal-title" id="annModalTitle"></p>
+          <p class="ann-modal-meta" id="annModalMeta"></p>
+        </div>
+        <button class="ann-modal-close" id="annModalClose">✕</button>
+      </div>
+      <div class="ann-modal-body" id="annModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ========== 하단 내비 (모바일 전용) ========== -->
+  <nav class="bottom-nav">
+    <a class="bottom-nav-item" href="index.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_home.png" alt="home">
+        <img class="nav-icon-active"  src="images/icon_home_active.png" alt="home">
+      </span>
+      <span class="bottom-nav-label">Home</span>
+    </a>
+    <a class="bottom-nav-item" href="curriculum.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_calendar.png" alt="curriculum">
+        <img class="nav-icon-active"  src="images/icon_calendar_active.png" alt="curriculum">
+      </span>
+      <span class="bottom-nav-label">Curric</span>
+    </a>
+    <a class="bottom-nav-item" href="#">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_book.png" alt="study">
+        <img class="nav-icon-active"  src="images/icon_book_active.png" alt="study">
+      </span>
+      <span class="bottom-nav-label">Study</span>
+    </a>
+    <a class="bottom-nav-item active" href="notifications.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_bell.png" alt="notifications">
+        <img class="nav-icon-active"  src="images/icon_bell_active.png" alt="notifications">
+      </span>
+      <span class="bottom-nav-label">Announce</span>
+    </a>
+    <a class="bottom-nav-item" href="info.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_info_mobile.png" alt="info">
+        <img class="nav-icon-active"  src="images/icon_info_mobile_active.png" alt="info">
+      </span>
+      <span class="bottom-nav-label">Info</span>
+    </a>
+  </nav>
+
+  <script src="js/announcements.js" defer></script>
+  <script src="js/notifications.js" defer></script>
+</body>
+</html>

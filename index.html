@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lao-Korea Entrepreneurship Bridge</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- ========== 사이드바 ========== -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">LOGO</div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item active">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_home.png" alt="home">
+            <img class="nav-icon-active"  src="images/icon_home_active.png" alt="home">
+          </span>
+          <span>HOME</span>
+        </li>
+        <li class="nav-item" onclick="location.href='curriculum.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_calendar.png" alt="curriculum">
+            <img class="nav-icon-active"  src="images/icon_calendar_active.png" alt="curriculum">
+          </span>
+          <span>CURRICULUM</span>
+        </li>
+        <li class="nav-item">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_book.png" alt="study">
+            <img class="nav-icon-active"  src="images/icon_book_active.png" alt="study">
+          </span>
+          <span>STUDY</span>
+        </li>
+        <li class="nav-item" onclick="location.href='notifications.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_bell.png" alt="notifications">
+            <img class="nav-icon-active"  src="images/icon_bell_active.png" alt="notifications">
+          </span>
+          <span>NOTIFICATIONS</span>
+        </li>
+        <li class="nav-item" onclick="location.href='info.html'">
+          <span class="nav-icon">
+            <img class="nav-icon-default" src="images/icon_info.png" alt="info">
+            <img class="nav-icon-active"  src="images/icon_info_active.png" alt="info">
+          </span>
+          <span>INFO</span>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ========== 메인 스크롤 영역 ========== -->
+  <main class="main-content">
+
+    <!-- 히어로 (position: fixed, 항상 배경에 고정) -->
+    <section class="hero">
+      <div class="hero-badge">
+        🇱🇦 <span>×</span> 🇰🇷 · KAUFFMAN PEV FRAMEWORK · 2026
+      </div>
+      <h1 class="hero-title">
+        LAO-KOREA<br>
+        ENTREPRENEURSHIP<br>
+        BRIDGE
+      </h1>
+      <p class="hero-subtitle">
+        A 4-month capacity-building program for Lao government officials —
+        strengthening entrepreneurial competencies and market-based business
+        planning through the Kauffman PEV Framework.
+      </p>
+    </section>
+
+    <!-- 흰색 콘텐츠 카드 (JS가 슬라이드 업 + 내부 스크롤 제어) -->
+    <div class="content-wrapper">
+      <div class="content-scroll">
+
+      <!-- 공지사항 (JS로 동적 렌더링) -->
+      <section class="announcements">
+        <h2 class="section-title">Announcements</h2>
+        <ul class="announcement-list" id="announcementList"></ul>
+      </section>
+
+      <!-- 공지사항 모달 -->
+      <div class="ann-modal-backdrop" id="annModalBackdrop">
+        <div class="ann-modal">
+          <div class="ann-modal-header">
+            <span class="ann-modal-icon" id="annModalIcon"></span>
+            <div>
+              <p class="ann-modal-title" id="annModalTitle"></p>
+              <p class="ann-modal-meta" id="annModalMeta"></p>
+            </div>
+            <button class="ann-modal-close" id="annModalClose">✕</button>
+          </div>
+          <div class="ann-modal-body" id="annModalBody"></div>
+        </div>
+      </div>
+
+      <!-- 캘린더 + 타임테이블 -->
+      <h2 class="section-title">Schedule</h2>
+      <div class="calendar-timetable-row">
+
+        <!-- 캘린더 위젯 (JS로 동적 렌더링) -->
+        <div class="calendar-widget" id="calendarWidget"></div>
+
+        <!-- 데일리 타임테이블 (JS로 동적 렌더링) -->
+        <div class="timetable-widget" id="timetableWidget">
+          <h3 class="timetable-title">🕐 DAILY TIMETABLE</h3>
+          <div id="timetableBody"></div>
+        </div>
+
+      </div>
+
+      <!-- 연락처 -->
+      <section class="contact-info">
+        <h2 class="section-title">Contact Information</h2>
+        <div class="contact-cards-row">
+
+          <div class="contact-card">
+            <div class="contact-role-badge">PROGRAM DIRECTOR</div>
+            <h3 class="contact-name">Prof. Woojin Lee</h3>
+            <ul class="contact-detail-list">
+              <li>
+                <span class="contact-icon">📞</span>
+                <span>+82-2-910-XXXX</span>
+              </li>
+              <li>
+                <span class="contact-icon">✉️</span>
+                <span>director@kookmin.ac.kr</span>
+              </li>
+              <li>
+                <span class="contact-icon">🏢</span>
+                <span>Kookmin Univ., GSGE Office</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-role-badge">PROGRAM COORDINATOR</div>
+            <h3 class="contact-name">Ms. Seongeun Jung</h3>
+            <ul class="contact-detail-list">
+              <li>
+                <span class="contact-icon">📞</span>
+                <span>+82-2-910-XXXX</span>
+              </li>
+              <li>
+                <span class="contact-icon">✉️</span>
+                <span>coordinator@kookmin.ac.kr</span>
+              </li>
+              <li>
+                <span class="contact-icon">🏢</span>
+                <span>Kookmin Univ., GSGE Office</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      </div><!-- /content-scroll -->
+    </div><!-- /content-wrapper -->
+
+  </main>
+
+  <!-- ========== 하단 내비 (모바일 전용) ========== -->
+  <nav class="bottom-nav">
+    <a class="bottom-nav-item active" href="index.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_home.png" alt="home">
+        <img class="nav-icon-active"  src="images/icon_home_active.png" alt="home">
+      </span>
+      <span class="bottom-nav-label">Home</span>
+    </a>
+    <a class="bottom-nav-item" href="curriculum.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_calendar.png" alt="curriculum">
+        <img class="nav-icon-active"  src="images/icon_calendar_active.png" alt="curriculum">
+      </span>
+      <span class="bottom-nav-label">Curric</span>
+    </a>
+    <a class="bottom-nav-item" href="#">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_book.png" alt="study">
+        <img class="nav-icon-active"  src="images/icon_book_active.png" alt="study">
+      </span>
+      <span class="bottom-nav-label">Study</span>
+    </a>
+    <a class="bottom-nav-item" href="notifications.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_bell.png" alt="notifications">
+        <img class="nav-icon-active"  src="images/icon_bell_active.png" alt="notifications">
+      </span>
+      <span class="bottom-nav-label">Announce</span>
+    </a>
+    <a class="bottom-nav-item" href="info.html">
+      <span class="bottom-nav-icon">
+        <img class="nav-icon-default" src="images/icon_info_mobile.png" alt="info">
+        <img class="nav-icon-active"  src="images/icon_info_mobile_active.png" alt="info">
+      </span>
+      <span class="bottom-nav-label">Info</span>
+    </a>
+  </nav>
+
+  <script src="js/calendar.js" defer></script>
+  <script src="js/timetable.js" defer></script>
+  <script src="js/announcements.js" defer></script>
+  <script src="js/index.js" defer></script>
+</body>
+</html>
