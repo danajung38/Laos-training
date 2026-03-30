@@ -368,4 +368,9 @@
 
   .curr-card-detail { padding: 0 18px; }
   .curr-card.open .curr-card-detail { padding: 16px 18px 20px; }
+
+  .curr-session-item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
