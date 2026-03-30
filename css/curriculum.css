@@ -19,6 +19,11 @@
   padding: 32px 48px 0;
   flex-shrink: 0;
   margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  transition: all 0.3s;
 }
 
 .curr-title {
@@ -243,19 +248,44 @@
   flex-wrap: wrap;
 }
 
-/* 강사 이름 */
-.curr-session-instructor {
-  display: inline-block;
-  font-size: 0.78rem;
-  color: #5a7a9e;
+/* 세션 날짜 / 강사 / 장소 한 줄 컨테이너 */
+.curr-session-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
   margin-bottom: 5px;
+}
+
+/* 두 번째 요소부터 앞에 구분선 추가 */
+.curr-session-info > span + span::before {
+  content: '|';
+  color: #c0cfe0;
+  font-weight: 300;
+  margin: 0 8px;
 }
 
 /* 세션 날짜 */
 .curr-session-date {
   font-size: 0.75rem;
   color: #5a7a9e;
-  margin-bottom: 5px;
+  margin-left: 3px;
+}
+
+/* 강사 이름 */
+.curr-session-instructor {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: #5a7a9e;
+  margin-left: 3px;
+}
+
+/* 장소 */
+.curr-session-location {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: #5a7a9e;
+  margin-left: 3px;
 }
 
 /* 강의 타입 뱃지 (색상은 JS 인라인으로 설정) */
@@ -269,18 +299,11 @@
 }
 
 .curr-session-title {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1a2e4a;
   flex: 1;
   min-width: 0;
-}
-
-.curr-session-sub {
-  display: inline-block;
-  font-size: 0.78rem;
-  color: #5a7a9e;
-  margin-bottom: 5px;
 }
 
 .curr-session-desc {
@@ -288,10 +311,11 @@
   color: #4a6a8a;
   line-height: 1.55;
   margin: 0;
+  margin-left: 3px;
 }
 
 .curr-card-detail-inner ul {
-  padding-left: 18px;
+  padding-left: 0;
   margin-top: 4px;
 }
 
@@ -312,6 +336,16 @@
   .curr-header { padding: 24px 20px 0; }
 
   .curr-title { font-size: 1.8rem; }
+
+  /* ── 스크롤 시 헤더 축소 (모바일 전용) ── */
+  .curr-header.shrink {
+    padding: 8px 20px 0;
+    margin-bottom: 6px;
+  }
+
+  .curr-header.shrink .curr-title {
+    font-size: 1.1rem;
+  }
 
   .curr-subbar { padding: 10px 20px; }
 

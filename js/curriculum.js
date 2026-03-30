@@ -18,7 +18,6 @@
  *      - desc       : 간단한 설명
  *      - date       : (선택) 세션 날짜, 예: 'Apr 13, 2026'
  *      - instructor : (선택) 이 세션의 강사 이름 (없으면 week의 professor 표시)
- *      - guest      : (선택) 특강 초청 강사명
  *      - location   : (선택) 필드트립/문화체험 장소
  * ================================================================
  */
@@ -631,7 +630,22 @@ const SESSION_TYPE_CONFIG = {
   const topicEl = document.getElementById('currTopic');
   const listEl  = document.getElementById('currList');
 
-  let activeMonth = 1;
+  /* ── 날짜 기준 초기 월 자동 설정 ── */
+  function getInitialMonth() {
+    var now = new Date();
+    var y = now.getFullYear();
+    var mo = now.getMonth() + 1; // 1~12
+    var d  = now.getDate();
+
+    if (y !== 2026) return 1;                                         // 2026년 외 기본값
+    if (mo < 5 || (mo === 5 && d <= 10))           return 1;  // ~5/10
+    if ((mo === 5 && d >= 11) || (mo === 6 && d <= 7))  return 2;  // 5/11~6/7
+    if ((mo === 6 && d >= 8)  || (mo === 7 && d <= 5))  return 3;  // 6/8~7/5
+    if (mo === 7 && d >= 6 && d <= 31)             return 4;  // 7/6~7/31
+    return 1;                                                         // 기타 기본값
+  }
+
+  let activeMonth = getInitialMonth();
 
   /* ── 월 탭 렌더 ── */
   function renderTabs() {
@@ -650,25 +664,29 @@ const SESSION_TYPE_CONFIG = {
   }
 
   /* ── 세션 아이템 HTML 생성 ── */
-  function buildSessionHTML(session, professor) {
+  function buildSessionHTML(session) {
     var cfg = SESSION_TYPE_CONFIG[session.type] || SESSION_TYPE_CONFIG.lecture;
     var badge =
       '<span class="curr-session-badge" style="color:' + cfg.color + ';background:' + cfg.bg + ';">' +
         cfg.label +
       '</span>';
-    var instructorName = session.instructor || professor || '';
-    var sub = '';
-    if (session.location) sub = '<span class="curr-session-sub">📍 ' + session.location + '</span>';
 
-return (
+    /* Date → Instructor → Location 순서로 한 줄 배치 */
+    var infoParts = [];
+    if (session.date)       infoParts.push('<span class="curr-session-date">📅 ' + session.date + '</span>');
+    if (session.instructor) infoParts.push('<span class="curr-session-instructor">👤 ' + session.instructor + '</span>');
+    if (session.location)   infoParts.push('<span class="curr-session-location">📍 ' + session.location + '</span>');
+    var infoLine = infoParts.length > 0
+      ? '<div class="curr-session-info">' + infoParts.join('') + '</div>'
+      : '';
+
+    return (
       '<li class="curr-session-item">' +
         '<div class="curr-session-top">' +
           badge +
           '<span class="curr-session-title">' + session.title + '</span>' +
-          (instructorName ? '<span class="curr-session-instructor">👤 ' + instructorName + '</span>' : '') +
         '</div>' +
-        (session.date ? '<div class="curr-session-date">📅 ' + session.date + '</div>' : '') +
-        (sub ? '<div>' + sub + '</div>' : '') +
+        infoLine +
         '<p class="curr-session-desc">' + session.desc + '</p>' +
       '</li>'
     );
@@ -689,7 +707,7 @@ return (
       }).join('');
 
       var sessionsHTML = (item.sessions || []).map(function (s) {
-        return buildSessionHTML(s, item.professor);
+        return buildSessionHTML(s);
       }).join('');
 
       li.innerHTML =
@@ -756,5 +774,32 @@ return (
   /* ── 초기 렌더 ── */
   renderTabs();
   renderList();
+
+  /* ── 스크롤 헤더 축소 (모바일 전용) ── */
+  var currHeader  = document.querySelector('.curr-header');
+  var currContent = document.querySelector('.curr-content');
+
+  function handleCurrScroll() {
+    if (!currHeader) return;
+    if (window.innerWidth <= 768) {
+      if (currContent.scrollTop > 50) {
+        currHeader.classList.add('shrink');
+      } else {
+        currHeader.classList.remove('shrink');
+      }
+    } else {
+      currHeader.classList.remove('shrink');
+    }
+  }
+
+  if (currContent) {
+    currContent.addEventListener('scroll', handleCurrScroll);
+  }
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768 && currHeader) {
+      currHeader.classList.remove('shrink');
+    }
+  });
 
 })();
