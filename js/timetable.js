@@ -16,7 +16,7 @@
 const TIMETABLE_DATA = [
 
   {
-    date: '2026-03-27',
+    date: '2026-04-13',
     items: [
       { time: '09:30 - 10:30', event: 'PEV Lecture' },
       { time: '11:00 - 12:00', event: 'Case Study' },

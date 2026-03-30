@@ -147,8 +147,11 @@
     const events = (typeof SCHEDULE_DATA !== 'undefined' ? SCHEDULE_DATA : []);
     const monthStr = `${YEAR}-${pad(m.num)}`;
     const fieldtripMap = {};
-    events.filter(e => e.type === 'fieldtrip' && e.date.startsWith(monthStr))
-          .forEach(e => { fieldtripMap[e.date] = e.label || 'Field Trip'; });
+    events.filter(e => (e.type === 'fieldtrip' || e.type === 'culturaltour' || e.type === 'event') && e.date.startsWith(monthStr))
+          .forEach(e => {
+            const label = e.label || (e.type === 'culturaltour' ? 'Cultural Tour' : e.type === 'event' ? 'Event' : 'Field Trip');
+            fieldtripMap[e.date] = { type: e.type, label };
+          });
 
     /* 행 생성 — 모든 이벤트를 셀 내부에 쌓음 */
     let rows = '';
@@ -192,7 +195,8 @@
           else if (isLast)       bCls += ' cal-band-end';
           else                   bCls += ' cal-band-cont';
 
-          const bStyle = weekMod.color ? ` style="background:${weekMod.color}"` : '';
+          const bandColor = weekMod.color || (typeof MODULE_DEFAULT_COLOR !== 'undefined' ? MODULE_DEFAULT_COLOR : '');
+          const bStyle = bandColor ? ` style="background:${bandColor}"` : '';
           /* 시작 셀: span 개수를 data 속성으로 저장, label 포함 */
           const spanCount = isFirst ? (lastBandCol - firstBandCol + 1) : 0;
           const label = isFirst
@@ -207,7 +211,7 @@
         rows += `<td class="${cls}"><div class="cal-cell-inner">
           ${d != null ? `<span class="cal-date-num">${d}</span>` : ''}
           ${bandHtml}
-          ${ft ? `<span class="cal-fieldtrip">• ${ft}</span>` : ''}
+          ${ft ? `<span class="cal-event-tag cal-event-${ft.type}">• ${ft.label}</span>` : ''}
         </div></td>`;
       }
       rows += '</tr>';

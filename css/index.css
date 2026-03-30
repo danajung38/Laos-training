@@ -338,15 +338,17 @@
   /* width는 JS가 span * cellWidth 픽셀로 설정 */
 }
 
-/* ── 필드트립 태그 ── */
-.cal-fieldtrip {
+/* ── 이벤트 태그 (field trip / cultural tour / event) ── */
+.cal-event-tag {
   display: block;
   margin-top: 4px;
   font-size: 0.58rem;
   font-weight: 600;
-  color: #c0392b;
   letter-spacing: 0.02em;
 }
+.cal-event-fieldtrip   { color: #7e3fff; }
+.cal-event-culturaltour { color: #e67e22; }
+.cal-event-event        { color: #e74c3c; }
 
 .timetable-widget {
   flex: 1;
