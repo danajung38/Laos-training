@@ -274,7 +274,7 @@
   function recalc() {
     const isMobile = window.innerWidth <= 768;
     heroH    = window.innerHeight * (isMobile ? HERO_VH_MOBILE : HERO_VH);
-    startTop = heroH - (isMobile ? OVERLAP_PX_MOBILE : OVERLAP_PX);
+    startTop = isMobile ? heroH - OVERLAP_PX_MOBILE : 309;
     maxSlide = startTop - PEEK_PX;
     content.style.top = startTop + 'px';
   }
@@ -290,7 +290,7 @@
     badge.style.display    = fade === 0 ? 'none' : '';
     subtitle.style.display = fade === 0 ? 'none' : '';
 
-    title.style.fontSize = (32 - 12 * progress) + 'px';
+    title.style.fontSize = (40 - 12 * progress) + 'px';
   }
 
   /* ── 슬라이드 애니메이션 ── */
