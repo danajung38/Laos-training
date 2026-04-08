@@ -43,9 +43,9 @@ const CURRICULUM_DATA = {
           {
             type: 'special',
             date: 'Apr 10',
-            title: 'The Founder’s Roadmap: Leveraging Startup Ecosystems from Campus to Global Stages',
+            title: '',
             instructor: 'Ms. Soohyun Na',
-            desc: 'This session tracks the journey of a founder navigating the robust startup infrastructure. From the first steps in university incubators and campus clubs to securing support from South Korea’s specialized foundations (e.g., for pre-entrepreneurs and women founders), I will share how to strategically utilize the ecosystem. Additionally, we will explore global benchmarks through the MassChallenge (Global Accelerator & Competition) and KIC program, featuring a masterclass on the "1-minute Elevator Pitch" perfected by experts from Boston University.ator pitch" learned from Boston University experts.',
+            desc: '',
           },
           {
             type: 'lecture',
@@ -72,9 +72,9 @@ const CURRICULUM_DATA = {
           {
             type: 'special',
             date: 'Apr 22',
-            title: 'untitled',
+            title: 'The Founder’s Roadmap: Leveraging Startup Ecosystems from Campus to Global Stages',
             instructor: 'Ms. Soohyun Na',
-            desc: '.',
+            desc: 'This session tracks the journey of a founder navigating the robust startup infrastructure. From the first steps in university incubators and campus clubs to securing support from South Korea’s specialized foundations (e.g., for pre-entrepreneurs and women founders), I will share how to strategically utilize the ecosystem. Additionally, we will explore global benchmarks through the MassChallenge (Global Accelerator & Competition) and KIC program, featuring a masterclass on the "1-minute Elevator Pitch" perfected by experts from Boston University.ator pitch" learned from Boston University experts.',
           },
           {
             type: 'culture',
@@ -209,6 +209,7 @@ const CURRICULUM_DATA = {
           {
             type: 'lecture',
             date: 'May 25, 28',
+            instructor: 'Prof. Woo Lee',
             title: 'Management & Organization Planning',
             desc: 'This chapter covers selecting a legal structure, building a management team, and developing strategies for recruiting, retaining, and outsourcing talent.',
           },
