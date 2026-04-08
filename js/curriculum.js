@@ -29,30 +29,30 @@ const CURRICULUM_DATA = {
       {
         week: 1,
         title: 'Chapter 1. Becoming an Entrepreneur',
-        dates: 'Apr 14–17, 2026',
+        dates: 'Apr 9–17, 2026',
         tags: ['#Entrepreneurship', '#characteristic', '#Personal-Vision'],
 
         sessions: [
           {
-            type: 'lecture',
-            date: 'Apr 14',
-            title: 'Becoming an Entrepreneur',
-            instructor: 'Prof. Woojin Lee / Prof. Byungchul Choi / Ms.Soohyun Na',
-            desc: 'Understand the definition and key characteristics of entrepreneurship, and learn to establish a personal vision and structured planning process for business success.',
+            type: 'orientation',
+            date: 'Apr 9',
+            title: 'Online-Orientation',
+            instructor: 'Prof. Woo Lee / Prof. Byungchul Choi',
+            desc: 'Online pre-orientation for a successful start to the training program. We will provide guidance on the overall schedule, completion criteria, and how to use the learning platform.',
           },
           {
             type: 'special',
-            date: 'Apr 15',
-            title: 'My Entrepreneurial Journey',
+            date: 'Apr 10',
+            title: 'The Founder’s Roadmap: Leveraging Startup Ecosystems from Campus to Global Stages',
             instructor: 'Ms. Soohyun Na',
-            desc: '',
+            desc: 'This session tracks the journey of a founder navigating the robust startup infrastructure. From the first steps in university incubators and campus clubs to securing support from South Korea’s specialized foundations (e.g., for pre-entrepreneurs and women founders), I will share how to strategically utilize the ecosystem. Additionally, we will explore global benchmarks through the MassChallenge (Global Accelerator & Competition) and KIC program, featuring a masterclass on the "1-minute Elevator Pitch" perfected by experts from Boston University.ator pitch" learned from Boston University experts.',
           },
           {
-            type: 'culture',
+            type: 'lecture',
             date: 'Apr 17',
-            title: 'Bukchon Hanok Village',
-            location: 'Bukchon Hanok Village',
-            desc: 'Explore Korea&apos;s living history with hands-on traditional activities in the heart of Bukchon Hanok Village.',
+            title: 'Becoming an Entrepreneur',
+            instructor: 'Prof. Woo Lee',
+            desc: 'Understand the definition and key characteristics of entrepreneurship, and learn to establish a personal vision and structured planning process for business success.',
           },
         ],
       },
@@ -64,8 +64,8 @@ const CURRICULUM_DATA = {
         sessions: [
           {
             type: 'lecture',
-            date: 'Apri 20, 22',
-            instructor: 'Prof. Byungchul Choi / Ms.Soohyun Na',
+            date: 'Apr 21',
+            instructor: 'Prof. Byungchul Choi',
             title: 'Recognizing Opportunities',
             desc: 'This chapter teaches how to identify market opportunities, generate creative business ideas, and evaluate them against your personal vision.',
           },
@@ -73,15 +73,15 @@ const CURRICULUM_DATA = {
             type: 'special',
             date: 'Apr 22',
             title: 'untitled',
-            instructor: 'Mr. Dongok Ahn(CEO)',
+            instructor: 'Ms. Soohyun Na',
             desc: '.',
           },
           {
-            type: 'fieldtrip',
+            type: 'culture',
             date: 'Apr 23',
-            title: 'TIPS (Tech Incubator Program for Startups Korea) & Asan Nanum Foundation',
-            location: ['TIPS Town', 'Asan Nanum Foundation'],
-            desc: '',
+            title: 'Bukchon Hanok Village',
+            location: 'Bukchon Hanok Village',
+            desc: 'Explore Korea&apos;s living history with hands-on traditional activities in the heart of Bukchon Hanok Village.',
           },
         ],
       },
@@ -101,16 +101,16 @@ const CURRICULUM_DATA = {
           {
             type: 'special',
             date: 'Apr 28',
-            title: '성공한 라오스 창업가 토크',
-            guest: 'Prof. jin Lee',
-            desc: '농업 스타트업을 성공시킨 창업가의 비즈니스 모델 설계 경험담을 듣습니다.',
+            title: 'untitled',
+            instructor: 'Prof. Hyoungjin Lee',
+            desc: '',
           },
           {
-            type: 'culture',
-            date: '',
-            title: '한국 문화 교류의 밤',
-            location: '한국문화원, 비엔티안',
-            desc: '한국 전통 문화 체험과 K-스타트업 문화를 소개하는 교류 행사입니다.',
+            type: 'fieldtrip',
+            date: 'Apr 30',
+            title: 'Content Business Hub: CJ ENM',
+            location: 'CJ ENM',
+            desc: 'We will visit CJ ENM, the hub of the Korean cultural industry, to observe the production and distribution of media content. This field trip offers a chance to explore world-leading media infrastructure and understand the success strategies of K-content.',
           },
         ],
       },
@@ -121,17 +121,18 @@ const CURRICULUM_DATA = {
         tags: ['#MVP', '#Business-Model', '#Laos'],
         sessions: [
           {
-            type: 'workshop',
-            date: 'May 4-6',
+            type: 'project',
+            date: 'May 4, 6',
             title: 'Economic Environment of Laos, BM Development & MVP',
-            desc: '최소기능제품(MVP)의 개념과 빠른 검증 사이클(Build-Measure-Learn)을 배웁니다.',
+            instructor:' Prof. Woo Lee / Prof. Byungchul Choi', 
+            desc: 'This project involves analyzing Laos&#39; current economic indicators to design localized Business Models (BM). Through Minimum Viable Product (MVP) planning, participants will materialize ideas and evaluate their feasibility in the real market.',
           },
           {
             type: 'fieldtrip',
-            date: '',
-            title: '월간 쇼케이스 & 피드백 세션',
-            location: '라오스-한국 비즈니스 센터, 비엔티안',
-            desc: '1개월 차 마무리 팀 발표. 프로토타입 시연 및 멘토 피드백.',
+            date: 'May 7',
+            title: 'TIPS (Tech Incubator Program for Startups Korea) & Asan Nanum Foundation',
+            location: ['TIPS Town', 'Asan Nanum Foundation'],
+            desc: 'Participants will visit TIPS Town and the Asan Nanum Foundation (MARU) to observe the Public-Private Partnership model in Korea’s startup ecosystem. This visit explores how government-led tech investment programs and private-sector-led entrepreneurship support systems create synergy to foster innovation.',
           },
         ],
       },
@@ -156,17 +157,17 @@ const CURRICULUM_DATA = {
           },
           {
             type: 'special',
-            date: '',
-            title: 'UX 리서치 심화',
-            guest: 'Ms. Noy Silavong (UX 컨설턴트)',
-            desc: '현지 라오스 사용자의 디지털 행동 패턴과 UX 설계 시 고려사항을 공유합니다.',
+            date: 'May 12',
+            title: '',
+            instructor: '',
+            desc: '',
           },
           {
-            type: 'culture',
-            date: '',
-            title: '분사이 축제 문화 체험',
-            location: '왓 시사켓 사원, 비엔티안',
-            desc: '라오스 전통 불교 문화를 체험하며 현지 커뮤니티와 소통합니다.',
+            type: 'fieldtrip',
+            date: 'May 14',
+            title: '',
+            location: '',
+            desc: '',
           },
         ],
       },
@@ -179,23 +180,23 @@ const CURRICULUM_DATA = {
           {
             type: 'lecture',
             date: 'May 18, 20',
-            instructor: 'Prof. Woojin Lee',
+            instructor: 'Prof. Woo Lee',
             title: 'Product/Service Planning',
             desc: 'This chapter covers defining your product or service, ensuring its protection, and complying with government regulations to draft the product section of a business plan.',
           },
           {
             type: 'special',
-            date: '',
-            title: '동남아 시장 진출 전략',
-            guest: 'Dr. Somsak Rattanavong (ASEAN 비즈니스 컨설턴트)',
-            desc: 'ASEAN 시장의 특수성과 라오스에서 성공하는 포지셔닝 전략을 논의합니다.',
+            date: 'May 19',
+            title: '',
+            instructor: '',
+            desc: '',
           },
           {
             type: 'fieldtrip',
-            date: '',
-            title: '경쟁 제품/서비스 현장 조사',
-            location: '비엔티안 IT 파크 & 스타트업 허브',
-            desc: '현지 경쟁 스타트업 방문 및 서비스 체험을 통해 차별화 포인트를 발굴합니다.',
+            date: 'May 21',
+            title: '',
+            location: 'AWS',
+            desc: '',
           },
         ],
       },
@@ -213,17 +214,17 @@ const CURRICULUM_DATA = {
           },
           {
             type: 'special',
-            date: '',
-            title: '라오스 세무·회계 실무',
-            guest: 'Ms. Khamla Phomvixay (공인회계사)',
-            desc: '라오스 현지 세금 구조, 법인 설립 비용, 회계 처리 실무를 안내합니다.',
+            date: 'May 26',
+            title: '',
+            instructor: '',
+            desc: '',
           },
           {
-            type: 'culture',
-            date: '',
-            title: '라오스 전통 요리 체험',
-            location: '비엔티안 요리 학교 (Makphet)',
-            desc: '라오스 음식 문화를 배우며 팀 빌딩 시간을 갖습니다.',
+            type: 'fieldtrip',
+            date: 'May 28',
+            title: '',
+            location: 'Kakao',
+            desc: '',
           },
         ],
       },
@@ -234,24 +235,18 @@ const CURRICULUM_DATA = {
         tags: ['#serviceDesign', '#MaketAnalysis', '#LaoPDR'],
         sessions: [
           {
-            type: 'workshop',
+            type: 'project',
             date: 'Jun 1, 3',
             title: 'Service Design & Market Analysis of Laos',
+            instructor:' Prof. Woo Lee / Prof. Byungchul Choi', 
+            desc: 'Participants will use Service Design methodologies to identify the real needs of the Lao people and market. By analyzing Laos’ market environment based on data, this session offers a hands-on experience in developing strategic service models applicable to the local context.',
+          },
+          {
+            type: 'workshop',
+            date: 'Jun 4 - 5',
+            title: '',
+            location: 'KMU Mallipo Education & Training Cente',
             desc: '',
-          },
-          {
-            type: 'special',
-            date: '',
-            title: '멘토 모의 피칭 세션',
-            guest: '멘토단 (투자자 3인, 창업가 2인)',
-            desc: '5분 피치 후 멘토 패널의 심층 Q&A 및 피드백을 받습니다.',
-          },
-          {
-            type: 'fieldtrip',
-            date: '',
-            title: '2개월 차 데모데이',
-            location: '라오스-한국 비즈니스 센터 대강당',
-            desc: '2개월 성과 발표 및 네트워킹 리셉션. 외부 투자자 초청.',
           },
         ],
       },
@@ -270,23 +265,23 @@ const CURRICULUM_DATA = {
           {
             type: 'lecture',
             date: 'Jun 8, 10',
-            instructor: 'Prof.Woojin Lee',
+            instructor: 'Prof. Woo Lee',
             title: 'Market Planning: Industry & Competition',
             desc: 'This chapter focuses on analyzing the industry and competition to develop a strategic marketing plan that positions your business effectively',
           },
           {
             type: 'special',
             date: '',
-            title: '라오스 SNS 마케팅 현황',
-            guest: 'Mr. Phonesavanh Keovilay (디지털 마케터)',
-            desc: '페이스북 중심의 라오스 SNS 생태계와 현지 마케팅 성공 사례를 공유합니다.',
+            title: '',
+            guest: '',
+            desc: '',
           },
           {
             type: 'fieldtrip',
-            date: '',
-            title: '메콩강 유람선 팀 워크숍',
-            location: '메콩강, 비엔티안',
-            desc: '메콩강 유람선에서 진행하는 창의적 팀 브레인스토밍 워크숍.',
+            date: 'Jun 11',
+            title: 'Market Insight Tour: Seongsu-dong Case Study',
+            location: 'Seongsu-dong Area, Seoul',
+            desc: 'Participants will freely explore Seongsu-dong, a hub for Korea’s startup ecosystem and retail trends, to conduct market research. By observing local business models and innovative cases firsthand, each participant will develop an individual report reflecting their unique insights and analysis.',
           },
         ],
       },
@@ -300,23 +295,23 @@ const CURRICULUM_DATA = {
           {
             type: 'lecture',
             date: 'Jun 15, 17',
-            instructor:'Prof. Hyejin Bang',
+            instructor: 'Prof. Hyejin Bang',
             title: 'Market Planning: Market Analysis',
             desc: 'This chapter focuses on conducting market research to identify a specific target market and building detailed customer profiles to guide business decisions.',
           },
           {
             type: 'special',
             date: '',
-            title: '라오스 정부 지원 사업 소개',
-            guest: 'Mr. Thongvanh Vongkhamchanh (기업청 담당관)',
-            desc: '라오스 중소기업 지원 정책 및 한-라오스 정부 협력 프로그램을 안내합니다.',
+            title: '',
+            guest: '',
+            desc: '',
           },
           {
-            type: 'fieldtrip',
-            date: '',
-            title: '네트워킹 믹서 & 산업 투어',
-            location: 'Lao ITECC 전시관',
-            desc: '라오스 ICT 기업 전시를 관람하고 업계 관계자들과 네트워킹합니다.',
+            type: 'workshop',
+            date: 'Jun 18 - 20',
+            title: '',
+            location: 'Busan',
+            desc: '',
           },
         ],
       },
@@ -329,23 +324,23 @@ const CURRICULUM_DATA = {
           {
             type: 'lecture',
             date: 'Jun 22, 24',
-            instructor:'Prof. Woojin Lee',
+            instructor: 'Prof. Woo Lee',
             title: 'Market Planning: Penetration',
             desc: 'This chapter explores building a business brand and developing effective communication strategies to successfully reach and penetrate your target market.',
           },
           {
             type: 'special',
             date: '',
-            title: '유니콘 스타트업의 스케일업 경험',
-            guest: 'Mr. Park Jae-won (쿠팡 전 CPO)',
-            desc: '대형 스타트업의 빠른 성장 과정에서 직면한 운영 도전과 해결책을 공유합니다.',
+            title: '',
+            guest: '',
+            desc: '',
           },
           {
-            type: 'culture',
-            date: '',
-            title: '루앙프라방 당일 문화 탐방',
-            location: '루앙프라방 세계문화유산 지구',
-            desc: '유네스코 세계문화유산 루앙프라방을 방문하여 라오스 역사 문화를 체험합니다.',
+            type: 'fieldtrip',
+            date: 'Jun 25',
+            title: '',
+            location: '',
+            desc: '',
           },
         ],
       },
@@ -354,27 +349,20 @@ const CURRICULUM_DATA = {
         title: 'Project. Marketing Analysis & Strategy',
         dates: 'Jun 29 – Jul 2, 2026',
         tags: ['#Marketing', '#Analysis', '#MarketingStrategy'],
-        professor: 'Prof. Choi Hyun-sik',
         sessions: [
           {
-            type: 'workshop',
-            date: 'jun 29, Jul 1',
+            type: 'project',
+            date: 'Jun 29, Jul 1',
             title: 'Marketing Analysis & Strategy',
-            desc: '',
-          },
-          {
-            type: 'special',
-            date: '',
-            title: '벤처캐피털 심사 기준',
-            guest: 'Ms. Kim Da-eun (Kakao Ventures)',
-            desc: '벤처캐피털이 초기 스타트업을 평가하는 프레임워크와 DD 과정을 소개합니다.',
+            instructor:' Prof. Woo Lee / Prof. Byungchul Choi', 
+            desc: 'This project involves identifying market gaps by analyzing opportunities and threats within the Lao market. By deriving marketing solutions that meet customer needs, participants will learn the practical process of establishing sustainable business growth strategies.',
           },
           {
             type: 'fieldtrip',
-            date: '',
-            title: '3개월 차 데모데이',
-            location: '비엔티안 힐튼 호텔 컨퍼런스홀',
-            desc: '외부 투자자 및 파트너를 초청한 중간 발표 행사.',
+            date: 'Jul 2',
+            title: '',
+            location: '',
+            desc: '',
           },
         ],
       },
@@ -393,23 +381,23 @@ const CURRICULUM_DATA = {
           {
             type: 'lecture',
             date: 'Jul 6, 8',
-            instructor:'Prof. Byungchul Choi',
+            instructor: 'Prof. Byungchul Choi',
             title: 'Market Planning: Pricing',
             desc: 'This chapter focuses on evaluating market constraints and sensitivities to establish pricing strategies that effectively support and reinforce your overall marketing plan.',
           },
           {
             type: 'special',
-            date: '',
-            title: '피치덱 디자인 클리닉',
-            guest: 'Ms. Park Soo-yeon (브랜드 디자이너)',
-            desc: '각 팀의 피치덱을 전문 디자이너가 실시간으로 피드백하고 개선합니다.',
+            date: 'Jul 7',
+            title: '',
+            instructor: '',
+            desc: '',
           },
           {
-            type: 'culture',
-            date: '',
-            title: '탓 루앙 축제 참관',
-            location: '탓 루앙 국립 사원, 비엔티안',
-            desc: '라오스 최대 국가 축제를 참관하며 현지 문화의 깊이를 경험합니다.',
+            type: 'fieldtrip',
+            date: 'Jul 16',
+            title: '',
+            location: '',
+            desc: '',
           },
         ],
       },
@@ -428,17 +416,17 @@ const CURRICULUM_DATA = {
           },
           {
             type: 'special',
-            date: '',
-            title: '미디어 트레이닝',
-            guest: 'Mr. Yoon Sung-jin (前 KBS 기자)',
-            desc: '인터뷰 대응, 메시지 통일, 위기 커뮤니케이션 실전 훈련.',
+            date: 'Jul 14',
+            title: '',
+            instructor: '',
+            desc: '',
           },
           {
             type: 'fieldtrip',
-            date: '',
-            title: '소프트 런칭 & 베타 유저 미팅',
-            location: 'BCEL One 핀테크 허브',
-            desc: '선발된 베타 유저 20명을 초청하여 첫 서비스 론칭 이벤트를 진행합니다.',
+            date: 'Jul 16',
+            title: '',
+            location: '',
+            desc: '',
           },
         ],
       },
@@ -451,23 +439,23 @@ const CURRICULUM_DATA = {
           {
             type: 'lecture',
             date: 'Jul 20, 22',
-            instructor:'Prof. Byungchul Choi',
+            instructor: 'Prof. Byungchul Choi',
             title: 'Finalizing the Business Statements',
             desc: 'This final chapter guides you through assembling your business plan, ensuring it is clear and professional, and defining the strategic next steps to turn your vision into reality.',
           },
           {
             type: 'special',
-            date: '',
-            title: '前 Demo Day 수상팀 특강',
-            guest: '2025년 Demo Day 대상팀 CEO',
-            desc: '작년 수상팀이 준비 과정에서 얻은 교훈과 현재 사업 현황을 공유합니다.',
+            date: 'Jul 21',
+            title: '',
+            instructor: '',
+            desc: '',
           },
           {
             type: 'fieldtrip',
-            date: '',
-            title: 'Full 드레스 리허설',
-            location: '라오스-한국 비즈니스 센터 대강당',
-            desc: '실제 Demo Day 행사 장소에서 전체 리허설 및 무대/음향/조명 점검.',
+            date: 'Jul 23',
+            title: '',
+            location: '',
+            desc: '',
           },
         ],
       },
@@ -481,6 +469,7 @@ const CURRICULUM_DATA = {
             type: 'presentation',
             date: 'Jul 27',
             title: 'Grand Final Pitching',
+            location: 'Room 215, Business Administration building',
             desc: 'Final Business Plan Presentation',
           },
         ],
@@ -493,12 +482,14 @@ const CURRICULUM_DATA = {
    세션 타입 설정 (뱃지 색상 & 라벨)
    ================================================================ */
 const SESSION_TYPE_CONFIG = {
-  lecture:   { label: 'Lecture',        color: '#ffffff', bg: '#1a3a6b' },  /* 진한 네이비 + 흰 글씨 */
-  special:   { label: 'Special Lecture', color: '#ffffff', bg: '#7c3aed' },  /* 보라 + 흰 글씨 */
-  fieldtrip: { label: 'Field Trip',     color: '#ffffff', bg: '#16803c' },  /* 초록 + 흰 글씨 */
-  culture:   { label: 'Cultural Trip',  color: '#ffffff', bg: '#ff8e60' },  /* 오렌지 + 흰 글씨 */
-  workshop:     { label: 'Workshop',      color: '#ffffff', bg: '#d97706' },  /* 앰버 + 흰 글씨 */
+  lecture: { label: 'Lecture', color: '#ffffff', bg: '#1a3a6b' },  /* 진한 네이비 + 흰 글씨 */
+  special: { label: 'Special Lecture', color: '#ffffff', bg: '#7c3aed' },  /* 보라 + 흰 글씨 */
+  fieldtrip: { label: 'Field Trip', color: '#ffffff', bg: '#16803c' },  /* 초록 + 흰 글씨 */
+  culture: { label: 'Cultural Trip', color: '#ffffff', bg: '#ff8e60' },  /* 오렌지 + 흰 글씨 */
+  workshop: { label: 'Workshop', color: '#ffffff', bg: '#F13E93' },  /* 앰버 + 흰 글씨 */
   presentation: { label: 'Presentation', color: '#ffffff', bg: '#0891b2' },  /* 시안 + 흰 글씨 */
+  orientation: { label: 'Orientation', color: '#ffffff', bg: '#03AED2' },
+  project: { label: 'Project', color: '#fff', bg: '#d97706' },
 };
 
 /* ================================================================
@@ -507,22 +498,22 @@ const SESSION_TYPE_CONFIG = {
 (function () {
   'use strict';
 
-  const tabsEl  = document.getElementById('monthTabs');
+  const tabsEl = document.getElementById('monthTabs');
   const topicEl = document.getElementById('currTopic');
-  const listEl  = document.getElementById('currList');
+  const listEl = document.getElementById('currList');
 
   /* ── 날짜 기준 초기 월 자동 설정 ── */
   function getInitialMonth() {
     var now = new Date();
     var y = now.getFullYear();
     var mo = now.getMonth() + 1; // 1~12
-    var d  = now.getDate();
+    var d = now.getDate();
 
     if (y !== 2026) return 1;                                         // 2026년 외 기본값
-    if (mo < 5 || (mo === 5 && d <= 10))           return 1;  // ~5/10
-    if ((mo === 5 && d >= 11) || (mo === 6 && d <= 7))  return 2;  // 5/11~6/7
-    if ((mo === 6 && d >= 8)  || (mo === 7 && d <= 5))  return 3;  // 6/8~7/5
-    if (mo === 7 && d >= 6 && d <= 31)             return 4;  // 7/6~7/31
+    if (mo < 5 || (mo === 5 && d <= 10)) return 1;  // ~5/10
+    if ((mo === 5 && d >= 11) || (mo === 6 && d <= 7)) return 2;  // 5/11~6/7
+    if ((mo === 6 && d >= 8) || (mo === 7 && d <= 5)) return 3;  // 6/8~7/5
+    if (mo === 7 && d >= 6 && d <= 31) return 4;  // 7/6~7/31
     return 1;                                                         // 기타 기본값
   }
 
@@ -549,12 +540,12 @@ const SESSION_TYPE_CONFIG = {
     var cfg = SESSION_TYPE_CONFIG[session.type] || SESSION_TYPE_CONFIG.lecture;
     var badge =
       '<span class="curr-session-badge" style="color:' + cfg.color + ';background:' + cfg.bg + ';">' +
-        cfg.label +
+      cfg.label +
       '</span>';
 
     /* Date → Instructor → Location 순서로 한 줄 배치 */
     var infoParts = [];
-    if (session.date)       infoParts.push('<span class="curr-session-date">📅 ' + session.date + '</span>');
+    if (session.date) infoParts.push('<span class="curr-session-date">📅 ' + session.date + '</span>');
     if (session.instructor) infoParts.push('<span class="curr-session-instructor">👤 ' + session.instructor + '</span>');
     if (session.location) {
       var locations = Array.isArray(session.location) ? session.location : [session.location];
@@ -568,12 +559,12 @@ const SESSION_TYPE_CONFIG = {
 
     return (
       '<li class="curr-session-item">' +
-        '<div class="curr-session-top">' +
-          badge +
-          '<span class="curr-session-title">' + session.title + '</span>' +
-        '</div>' +
-        infoLine +
-        '<p class="curr-session-desc">' + session.desc + '</p>' +
+      '<div class="curr-session-top">' +
+      badge +
+      '<span class="curr-session-title">' + session.title + '</span>' +
+      '</div>' +
+      infoLine +
+      '<p class="curr-session-desc">' + session.desc + '</p>' +
       '</li>'
     );
   }
@@ -598,18 +589,18 @@ const SESSION_TYPE_CONFIG = {
 
       li.innerHTML =
         '<div class="curr-card-header">' +
-          '<div class="curr-week-badge">W' + item.week + '</div>' +
-          '<div class="curr-card-info">' +
-            '<p class="curr-card-title">' + item.title + '</p>' +
-            '<p class="curr-card-dates">' + item.dates + '</p>' +
-            '<div class="curr-card-tags">' + tags + '</div>' +
-          '</div>' +
-          '<span class="curr-card-arrow">▼</span>' +
+        '<div class="curr-week-badge">W' + item.week + '</div>' +
+        '<div class="curr-card-info">' +
+        '<p class="curr-card-title">' + item.title + '</p>' +
+        '<p class="curr-card-dates">' + item.dates + '</p>' +
+        '<div class="curr-card-tags">' + tags + '</div>' +
+        '</div>' +
+        '<span class="curr-card-arrow">▼</span>' +
         '</div>' +
         '<div class="curr-card-detail">' +
-          '<div class="curr-card-detail-inner">' +
-            '<ul class="curr-session-list">' + sessionsHTML + '</ul>' +
-          '</div>' +
+        '<div class="curr-card-detail-inner">' +
+        '<ul class="curr-session-list">' + sessionsHTML + '</ul>' +
+        '</div>' +
         '</div>';
 
       /* 아코디언 토글 — 다른 카드 열면 기존 카드 닫기 */
@@ -662,7 +653,7 @@ const SESSION_TYPE_CONFIG = {
   renderList();
 
   /* ── 스크롤 헤더 축소 (모바일 전용) ── */
-  var currHeader  = document.querySelector('.curr-header');
+  var currHeader = document.querySelector('.curr-header');
   var currContent = document.querySelector('.curr-content');
 
   function handleCurrScroll() {

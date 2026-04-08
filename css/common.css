@@ -110,6 +110,53 @@ body {
 .nav-item.active .nav-icon .nav-icon-default { display: none; }
 .nav-item.active .nav-icon .nav-icon-active  { display: block; }
 
+/* ======= 사이드바 서브 내비게이션 ======= */
+.nav-sub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px 0 8px 0;
+  margin: 0;
+}
+
+.nav-sub-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px 8px 56px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 8px;
+  letter-spacing: 0.02em;
+  transition: color 0.15s, background 0.15s;
+  text-decoration: none;
+}
+
+.nav-sub-item:hover {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-sub-item.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav-sub-item.active::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 8px;
+  flex-shrink: 0;
+  margin-left: -12px;
+}
+
 /* ======= 공지사항 모달 (공통) ======= */
 .ann-modal-backdrop {
   display: none;

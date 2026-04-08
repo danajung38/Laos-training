@@ -25,10 +25,20 @@ const ANNOUNCEMENTS_DATA = [
     id: 1,
     icon: 'icon_announce.png',
     emoji: '📢',
-    title: 'Welcome to the Lao-Korea Entrepreneurship Bridge!',
-    date: 'March 25, 2026',
-    author: 'Program Administrator',
-    content: `Welcome to the Lao-Korea Entrepreneurship Bridge Program!\n\nWe are thrilled to have you join us for this exciting journey. Over the coming weeks, you will engage in hands-on modules, field trips, and collaborative workshops designed to strengthen your entrepreneurial skills.\n\nPlease make sure to review the program schedule and contact your coordinator if you have any questions. We look forward to an inspiring and productive program together.`,
+    title: 'Online Sessions for Initial Training Schedule',
+    date: 'April 7, 2026',
+    author: 'Program Coordinator',
+    content:
+      `
+    Dear Participants,
+    Due to a slight delay in the arrival schedule to Korea, the first three sessions of the training program will be conducted online via Zoom. Please check the updated schedule below carefully, noting the time difference between Korea and Laos.
+
+    Date,Session Title,Korea Time (KST),Laos Time (ICT),Speaker
+Apr 9 (Thu),Orientation,11:00 ~ 12:00,09:00 ~ 10:00,"Woojin Lee, Byung-chul Choi"
+Apr 10 (Fri),Guest Lecture,12:00 ~ 13:30,10:00 ~ 11:30,Soohyun Na
+Apr 17 (Fri),PEV,10:00 ~ 11:00,08:00 ~ 09:00,Woojin Lee
+
+    `,
   },
 
   {

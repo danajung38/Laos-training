@@ -116,6 +116,19 @@
   padding: 56px 60px 80px;
 }
 
+/* ======= 히어로 국기 ======= */
+.hero-subtitle .hero-flag {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.hero-subtitle .hero-flag-sep {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
 /* ======= 히어로 요소 전환 효과 ======= */
 .hero-badge {
   transition: opacity 0.15s ease;
@@ -528,6 +541,10 @@
     font-size: 0.8rem;
     padding: 8px 20px 8px 4px;
     max-width: 100%;
+  }
+
+  .hero-subtitle .hero-flag {
+    font-size: 2rem;
   }
 
   /* 흰 카드: 히어로 위에 더 많이 겹치도록 */

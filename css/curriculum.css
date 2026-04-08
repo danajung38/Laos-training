@@ -170,7 +170,7 @@
 }
 
 .curr-card-title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #1a2e4a;
   margin-bottom: 4px;
@@ -273,7 +273,7 @@
 
 /* 세션 날짜 */
 .curr-session-date {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: #5a7a9e;
   margin-left: 3px;
 }
@@ -281,7 +281,7 @@
 /* 강사 이름 */
 .curr-session-instructor {
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: #5a7a9e;
   margin-left: 3px;
 }
@@ -289,7 +289,7 @@
 /* 장소 */
 .curr-session-location {
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: #5a7a9e;
   margin-left: 3px;
 }
@@ -305,7 +305,7 @@
 }
 
 .curr-session-title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #1a2e4a;
   flex: 1;
@@ -313,7 +313,7 @@
 }
 
 .curr-session-desc {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   color: #4a6a8a;
   line-height: 1.55;
   margin: 0;

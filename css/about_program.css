@@ -1,0 +1,650 @@
+/* ================================================================
+   about_program.css — About / Program 페이지 전용 스타일
+   ================================================================ */
+
+/* ======= 히어로 (position: fixed, 배경 고정) ======= */
+.ap-hero {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  height: 42vh;
+  z-index: 0;
+  background: url('../images/bg_about_program.png') center / cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  /* 배경은 꽉 차고, 내용은 최대 1200px 중앙 정렬 */
+  padding: 0 max(48px, calc((100% - 1200px) / 2)) 36px;
+  overflow: hidden;
+}
+
+.ap-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+  pointer-events: none;
+}
+
+.ap-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ap-hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.ap-hero-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  transition: none;
+}
+
+.ap-hero-sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 400;
+  align-self: center;
+  transition: opacity 0.15s ease;
+}
+
+/* ======= 콘텐츠 래퍼 (JS가 top 값으로 슬라이드 업 제어) ======= */
+.ap-content-wrapper {
+  position: fixed;
+  /* top: JS가 초기화 */
+  left: var(--sidebar-width);
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 24px 24px 0 0;
+  z-index: 1;
+}
+
+/* ======= 서브 탭 ======= */
+.ap-tabs {
+  display: flex;
+  gap: 0;
+  background: #fff;
+  border-bottom: 2px solid var(--border);
+  flex-shrink: 0;
+  padding: 0 max(40px, calc((100% - 1200px) / 2));
+}
+
+.ap-tab {
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  padding: 13px 20px;
+  border-bottom: 2.5px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.ap-tab:hover { color: var(--accent); }
+
+.ap-tab-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ======= 실제 스크롤 컨테이너 ======= */
+.ap-scroll {
+  height: calc(100% - 46px); /* 탭 높이 제외 */
+  overflow-y: auto;
+  /* 배경은 꽉 차고, 카드들은 최대 1200px 중앙 정렬 */
+  padding: 32px max(45px, calc((100% - 1200px) / 2)) 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  /* 스크롤바 숨김 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.ap-scroll::-webkit-scrollbar { display: none; }
+
+/* ======= 개요 배너 ======= */
+.ap-banner {
+  background: linear-gradient(135deg, #0a1628 0%, #1c478b 100%);
+  border-radius: 16px;
+  padding: 28px 36px;
+}
+
+.ap-banner-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.ap-banner-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* ======= Key Facts ======= */
+.ap-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.ap-fact-card {
+  background: #f4f6f9;
+  border-radius: 14px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  border: 1px solid var(--border);
+}
+
+.ap-fact-icon { font-size: 1.5rem; margin-bottom: 4px; }
+.ap-fact-value { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.ap-fact-label { font-size: 0.74rem; color: var(--text-muted); letter-spacing: 0.02em; }
+
+/* ======= 섹션 공통 ======= */
+.ap-section { display: flex; flex-direction: column; gap: 16px; }
+
+.ap-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+/* ======= Objectives ======= */
+.ap-obj-list { display: flex; flex-direction: column; gap: 14px; }
+
+.ap-obj-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #f4f6f9;
+  border-radius: 14px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+}
+
+.ap-obj-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #d8dce8;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ap-obj-text { font-size: 0.9rem; color: #444; line-height: 1.75; }
+
+/* ======= Support & Benefits ======= */
+.ap-support-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+.ap-support-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #f4f6f9;
+  border-radius: 14px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+}
+
+.ap-support-icon { font-size: 1.6rem; flex-shrink: 0; }
+.ap-support-name { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 5px; }
+.ap-support-desc { font-size: 0.82rem; color: #555; line-height: 1.6; }
+.ap-support-note { font-size: 0.75rem; color: var(--text-muted); }
+
+/* ======= Eligibility ======= */
+.ap-eligibility-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.ap-elig-block { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+
+.ap-elig-header {
+  padding: 12px 22px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.ap-elig-mandatory .ap-elig-header  { background: #0a1628; }
+.ap-elig-recommended .ap-elig-header { background: #4a7bbf; }
+
+.ap-elig-list {
+  list-style: none;
+  background: #f4f6f9;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ap-elig-list li {
+  font-size: 0.84rem;
+  color: #444;
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+
+.ap-elig-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ======= Required Documents ======= */
+.ap-docs-table-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.ap-docs-table { width: 100%; border-collapse: collapse; }
+
+.ap-docs-table thead tr { background: #0a1628; }
+
+.ap-docs-table thead th {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 13px 20px;
+  text-align: left;
+}
+
+.ap-docs-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.12s;
+}
+
+.ap-docs-table tbody tr:last-child { border-bottom: none; }
+.ap-docs-table tbody tr:hover { background: #f8f9ff; }
+
+.ap-docs-table tbody td {
+  padding: 13px 20px;
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.55;
+  background: #f4f6f9;
+}
+
+.ap-docs-table tbody tr:hover td { background: #f0f3ff; }
+
+.ap-docs-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 38%;
+}
+
+/* ======= About KMU ======= */
+.ap-kmu-card {
+  background: #f4f6f9;
+  border-radius: 14px;
+  padding: 28px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  border: 1px solid var(--border);
+}
+
+.ap-kmu-logo-wrap { flex-shrink: 0; width: 120px; }
+.ap-kmu-logo { width: 100%; height: auto; object-fit: contain; }
+
+.ap-kmu-name { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 2px; }
+.ap-kmu-sub  { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; }
+.ap-kmu-desc { font-size: 0.86rem; color: #555; line-height: 1.75; margin-bottom: 14px; }
+
+.ap-kmu-link {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1c478b;
+  text-decoration: none;
+  border-bottom: 1px solid #1c478b;
+  padding-bottom: 1px;
+  transition: opacity 0.15s;
+}
+.ap-kmu-link:hover { opacity: 0.7; }
+
+/* ======= Objective group label ======= */
+.ap-obj-group-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-left: 4px;
+}
+
+/* ======= Program Structure intro ======= */
+.ap-structure-intro {
+  background: #f4f6f9;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+/* ======= Component Cards ======= */
+.ap-component-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.ap-component-card {
+  background: #f4f6f9;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ap-component-icon { font-size: 1.5rem; }
+
+.ap-component-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ap-component-desc {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* ======= Monthly Plan ======= */
+.ap-monthly-plan {
+  background: #0a1628;
+  border-radius: 16px;
+  padding: 28px 28px 24px;
+}
+
+.ap-monthly-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.ap-month-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.ap-month-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px 14px;
+}
+
+.ap-month-header {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.ap-month-theme {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.ap-month-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ap-month-list li {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+  padding-left: 12px;
+  position: relative;
+}
+
+.ap-month-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ======= Kauffman PEV Card ======= */
+.ap-pev-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ap-pev-left, .ap-pev-right {
+  background: #f4f6f9;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ap-pev-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.ap-pev-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.ap-pev-desc {
+  font-size: 0.86rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+.ap-pev-foundation-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.ap-pev-foundation-desc {
+  font-size: 0.86rem;
+  color: #444;
+  line-height: 1.75;
+  flex: 1;
+}
+
+/* ======= Expected Outcomes ======= */
+.ap-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.ap-outcome-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #f4f6f9;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+}
+
+.ap-outcome-icon { font-size: 1.6rem; flex-shrink: 0; }
+
+.ap-outcome-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.ap-outcome-desc {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* ======= Partner Organizations ======= */
+.ap-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.ap-partner-card {
+  background: #f4f6f9;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ap-partner-lead {
+  border-color: #1c478b;
+  background: #f0f4ff;
+}
+
+.ap-partner-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: #0a1628;
+  border-radius: 4px;
+  padding: 3px 8px;
+  width: fit-content;
+}
+
+.ap-partner-badge-sub { background: #4a7bbf; }
+
+.ap-partner-logo-wrap {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.ap-partner-logo {
+  max-height: 44px;
+  max-width: 140px;
+  object-fit: contain;
+}
+
+.ap-partner-logo-koica {
+  max-height: 36px;
+}
+
+.ap-partner-logo-text {
+  justify-content: flex-start;
+}
+
+.ap-partner-logo-abbr {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1c478b;
+  letter-spacing: -0.02em;
+}
+
+.ap-partner-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ap-partner-desc {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* ================================================================
+   모바일 반응형  ≤ 768px
+   ================================================================ */
+@media (max-width: 768px) {
+
+  .ap-hero {
+    left: 0;
+    height: 38vh;
+    padding: 0 20px 24px;
+  }
+
+  .ap-hero-title { font-size: 1.8rem !important; }
+  .ap-hero-sub   { display: none; }
+
+  .ap-content-wrapper { left: 0; }
+
+  .ap-tabs { padding: 0 16px; }
+
+  .ap-scroll { padding: 20px 16px 100px; gap: 20px; }
+
+  .ap-banner { padding: 20px; }
+  .ap-banner-title { font-size: 1.05rem; }
+
+  .ap-facts-grid     { grid-template-columns: repeat(2, 1fr); }
+  .ap-support-grid   { grid-template-columns: 1fr; }
+  .ap-eligibility-row { grid-template-columns: 1fr; }
+
+  .ap-component-grid   { grid-template-columns: repeat(2, 1fr); }
+  .ap-month-row        { grid-template-columns: repeat(2, 1fr); }
+  .ap-pev-card         { grid-template-columns: 1fr; }
+  .ap-outcomes-grid    { grid-template-columns: 1fr; }
+  .ap-partners-grid    { grid-template-columns: 1fr; }
+}
