@@ -271,6 +271,10 @@
 .fs-coordinator-bio-link:hover { opacity: 0.55; }
 
 /* ======= Special Lecturers 그리드 ======= */
+
+.fs-special {
+  display: none;
+}
 .fs-lecturers-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

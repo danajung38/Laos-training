@@ -244,9 +244,9 @@ const CURRICULUM_DATA = {
           {
             type: 'workshop',
             date: 'Jun 4 - 5',
-            title: '',
+            title: 'Global Benchmarking and Business Strategy for Laos',
             location: 'KMU Mallipo Education & Training Cente',
-            desc: '',
+            desc: 'This intensive session focuses on analyzing global market trends to derive actionable insights for the Laotian startup ecosystem. Participants will collaborate to establish a robust business strategy tailored specifically to the unique opportunities and challenges of the Laos market.',
           },
         ],
       },
@@ -309,9 +309,9 @@ const CURRICULUM_DATA = {
           {
             type: 'workshop',
             date: 'Jun 18 - 20',
-            title: '',
+            title: 'Busan Workshop: Insights into Regional Entrepreneurship',
             location: 'Busan',
-            desc: '',
+            desc: 'Designed to explore the driving forces of regional economic growth, this program includes site visits to Busan’s leading business incubators and agencies. Beyond the professional insights, the workshop provides an opportunity to explore Busan’s cultural landmarks, fostering a deeper understanding of the local community.',
           },
         ],
       },
