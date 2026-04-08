@@ -41,24 +41,6 @@ Apr 17 (Fri),PEV,10:00 ~ 11:00,08:00 ~ 09:00,Woojin Lee
     `,
   },
 
-  {
-    id: 2,
-    icon: 'icon_announce.png',
-    emoji: '📢',
-    title: 'Pre-Program Reading Material Available',
-    date: 'March 25, 2026',
-    author: 'Program Administrator',
-    content: `Pre-program reading materials are now available for download on the student portal.\n\nPlease review the following materials before the first session:\n- Introduction to Social Entrepreneurship\n- Lao Business Environment Overview\n- Korea-Lao Economic Relations Report\n\nCompleting the readings will help you get the most out of the upcoming lectures and discussions.`,
-  },
 
-  {
-    id: 3,
-    icon: 'icon_announced.png',
-    emoji: '📢',
-    title: 'Full Program Calendar Published',
-    date: 'March 25, 2026',
-    author: 'Program Administrator',
-    content: `The full program calendar for April through August 2026 has been published.\n\nKey dates to note:\n- April 13–16: Module 1, Week 1 — 기회발견 (Opportunity Discovery)\n- April 20–23: Module 1, Week 2 — 기회발견\n- Field trips are scheduled every Thursday during module weeks.\n\nPlease check the calendar on the dashboard regularly for any updates or changes.`,
-  },
 
 ];

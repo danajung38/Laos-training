@@ -61,39 +61,33 @@
     </nav>
   </aside>
 
-  <!-- ========== 히어로 (position: fixed, 배경 고정) ========== -->
-  <section class="ap-hero">
-    <div class="ap-hero-inner">
-      <p class="ap-hero-eyebrow">ABOUT</p>
-      <h1 class="ap-hero-title">Program</h1>
-      <p class="ap-hero-sub">Kauffman FasTrac Certificate Program</p>
-    </div>
-  </section>
+  <!-- ========== 메인 영역 ========== -->
+  <main class="ap-main">
 
-  <!-- ========== 콘텐츠 래퍼 (JS가 top 값으로 슬라이드 업 제어) ========== -->
-  <div class="ap-content-wrapper">
+    <!-- ── 헤더 (배경 이미지 + 타이틀) ── -->
+    <header class="ap-header">
+      <div class="ap-header-inner">
+        <p class="ap-header-eyebrow">ABOUT</p>
+        <h1 class="ap-header-title">Program</h1>
+        <p class="ap-header-sub">Kauffman FasTrac Certificate Program</p>
+      </div>
+    </header>
 
-    <!-- ABOUT 서브 탭 -->
-    <div class="ap-tabs">
-      <a class="ap-tab ap-tab-active" href="about.html">Program</a>
-      <a class="ap-tab" href="about_faculty.html">Faculty &amp; Staff</a>
-    </div>
+    <!-- ── 콘텐츠 ── -->
+    <div class="ap-content">
 
-    <!-- 실제 스크롤 컨테이너 -->
-    <div class="ap-scroll">
-
-      <!-- ── 1. Program Overview ── -->
+      <!-- 1. Program Overview -->
       <div class="ap-banner">
         <p class="ap-banner-label">The Project for Establishment of Human Resource Development of Digital Innovative MSMEs in Lao PDR</p>
         <h2 class="ap-banner-title">A 4-month intensive capacity building training program for Lao government officials, designed to strengthen entrepreneurship and market-oriented business planning capacity through the Kauffman PEV (Planning Entrepreneurial Venture) framework.</h2>
       </div>
 
-      <!-- ── Key Facts ── -->
+      <!-- Key Facts -->
       <div class="ap-facts-grid">
         <div class="ap-fact-card">
           <span class="ap-fact-icon">📅</span>
           <span class="ap-fact-value">4 Months</span>
-          <span class="ap-fact-label">Mar – Jul 2026 · In Korea</span>
+          <span class="ap-fact-label">Apr – Aug 2026 · In Korea</span>
         </div>
         <div class="ap-fact-card">
           <span class="ap-fact-icon">🌐</span>
@@ -107,12 +101,12 @@
         </div>
         <div class="ap-fact-card">
           <span class="ap-fact-icon">👥</span>
-          <span class="ap-fact-value">4 – 8 People</span>
+          <span class="ap-fact-value">4 People</span>
           <span class="ap-fact-label">Lao Government Officials</span>
         </div>
       </div>
 
-      <!-- ── 2. Program Objectives ── -->
+      <!-- 2. Program Objectives -->
       <section class="ap-section">
         <h2 class="ap-section-title">Program Objectives</h2>
 
@@ -145,7 +139,7 @@
         </div>
       </section>
 
-      <!-- ── 3. Key Components / Program Structure ── -->
+      <!-- 3. Key Components / Program Structure -->
       <section class="ap-section">
         <h2 class="ap-section-title">Key Components &amp; Program Structure</h2>
         <div class="ap-structure-intro">
@@ -229,7 +223,7 @@
         </div>
       </section>
 
-      <!-- ── 4. Kauffman PEV Framework ── -->
+      <!-- 4. Kauffman PEV Framework -->
       <section class="ap-section">
         <h2 class="ap-section-title">Kauffman PEV Framework</h2>
         <div class="ap-pev-card">
@@ -247,7 +241,7 @@
         </div>
       </section>
 
-      <!-- ── 5. Expected Outcomes ── -->
+      <!-- 5. Expected Outcomes -->
       <section class="ap-section">
         <h2 class="ap-section-title">Expected Outcomes</h2>
         <div class="ap-outcomes-grid">
@@ -282,7 +276,7 @@
         </div>
       </section>
 
-      <!-- ── 6. Partner Organizations ── -->
+      <!-- 6. Partner Organizations -->
       <section class="ap-section">
         <h2 class="ap-section-title">Partner Organizations</h2>
         <div class="ap-partners-grid">
@@ -313,14 +307,14 @@
             </div>
             <p class="ap-partner-name">KOICA</p>
             <p class="ap-partner-desc">Korea International Cooperation Agency — funds the program as part of the broader ODA project for the establishment of human resource development of digital innovative MSMEs in Lao PDR.</p>
-            <a class="ap-kmu-link" href="https://www.koica.go.kr/eng/" target="_blank">🔗 koica.go.kr</a>
+            <a class="ap-kmu-link" href="https://www.koica.go.kr/sites/koica_en/index.do" target="_blank">🔗 koica.go.kr</a>
           </div>
 
         </div>
       </section>
 
-    </div><!-- /ap-scroll -->
-  </div><!-- /ap-content-wrapper -->
+    </div><!-- /ap-content -->
+  </main><!-- /ap-main -->
 
   <!-- ========== 하단 내비 (모바일 전용) ========== -->
   <nav class="bottom-nav">
@@ -338,7 +332,7 @@
       </span>
       <span class="bottom-nav-label">Curric</span>
     </a>
-    <a class="bottom-nav-item active" href="about_program.html">
+    <a class="bottom-nav-item active" href="about.html">
       <span class="bottom-nav-icon">
         <img class="nav-icon-default" src="images/icon_book_mobile.png" alt="about">
         <img class="nav-icon-active" src="images/icon_book_mobile_active.png" alt="about">

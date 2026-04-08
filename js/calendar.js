@@ -38,67 +38,72 @@ const SCHEDULE_DATA = [
 
   // ── 4월 ──────────────────────────────────────────────────────
   /* 2째주 */
-  { type: 'module', start: '2026-04-13', end: '2026-04-17', label: 'Week 1: 기회발견' },
-  { type: 'event', date: '2026-04-14', label: 'Orientation' },
-  { type: 'culturaltour', date: '2026-04-17', label: 'Cultural Tour' },
+  { type: 'module', start: '2026-04-10', end: '2026-04-17', label: 'Week 1: Becoming an Entrepreneur' },
+  { type: 'event', date: '2026-04-09', label: 'Orientation' },
+
 
   /* 3째주 */
-  { type: 'module', start: '2026-04-20', end: '2026-04-23', label: 'Week 2: 기회발견' },
-  { type: 'fieldtrip', date: '2026-04-23', label: 'Field Trip' },
+  { type: 'module', start: '2026-04-20', end: '2026-04-23', label: 'Week 2: Recognizing Opportunities' },
+    { type: 'culturaltour', date: '2026-04-23', label: 'Cultural Tour'},
 
   /* 4째주 */
-  { type: 'module', start: '2026-04-27', end: '2026-04-30', label: 'Week 3: 기회발견' },
-  { type: 'fieldtrip', date: '2026-04-23', label: 'Field Trip' },
+  { type: 'module', start: '2026-04-27', end: '2026-04-30', label: 'Week 3: Defining a Business Concept' },
+  { type: 'fieldtrip', date: '2026-04-30', label: 'Field Trip' },
 
   // ── 5월 ──────────────────────────────────────────────────────
   /* 1째주 */
-  { type: 'module', start: '2026-05-04', end: '2026-05-07', label: 'Week 4: 모듈명' },
+  { type: 'module', start: '2026-05-04', end: '2026-05-07', label: 'Week 4: Project' },
   { type: 'fieldtrip', date: '2026-05-07', label: 'Field Trip' },
 
   /* 2째주 */
-  { type: 'module', start: '2026-05-11', end: '2026-05-14', label: 'Week 5: 모듈명', color: '#FFD9B1' },
+  { type: 'module', start: '2026-05-11', end: '2026-05-14', label: 'Week 5: Model Feasibility checklist', color: '#FFD9B1' },
   { type: 'fieldtrip', date: '2026-05-14', label: 'Field Trip' },
+
   /* 3째주 */
-    { type: 'module', start: '2026-05-18', end: '2026-05-21', label: 'Week 6: 모듈명', color: '#FFD9B1' },
-  { type: 'fieldtrip', date: '2026-05-14', label: 'Field Trip' },
+    { type: 'module', start: '2026-05-18', end: '2026-05-21', label: 'Week 6: Product/Service Planning', color: '#FFD9B1' },
+  { type: 'fieldtrip', date: '2026-05-21', label: 'Field Trip' },
+
   /* 4째주 */
-      { type: 'module', start: '2026-05-25', end: '2026-05-28', label: 'Week 7: 모듈명', color: '#FFD9B1' },
-  { type: 'fieldtrip', date: '2026-05-14', label: 'Field Trip' },
+      { type: 'module', start: '2026-05-25', end: '2026-05-28', label: 'Week 7: Management & Organization Planning', color: '#FFD9B1' },
+  { type: 'fieldtrip', date: '2026-05-28', label: 'Field Trip' },
 
   // ── 6월 ──────────────────────────────────────────────────────
   /* 1째주 */
-  { type: 'module', start: '2026-06-01', end: '2026-06-04', label: 'Week 8: 모듈명', color: '#FFD9B1' },
-  { type: 'fieldtrip', date: '2026-06-04', label: 'Field Trip' },
+  { type: 'module', start: '2026-06-01', end: '2026-06-04', label: 'Week 8: Project', color: '#FFD9B1' },
+  { type: 'event', date: '2026-06-04', label: 'Workshop' },
+  { type: 'event', date: '2026-06-05', label: 'Workshop' },
 
   /* 2째주 */
-  { type: 'module', start: '2026-06-08', end: '2026-06-11', label: 'Week 9: 모듈명', color:'#EADBFF' },
+  { type: 'module', start: '2026-06-08', end: '2026-06-11', label: 'Week 9: Market Planning: Industry & Competition', color:'#EADBFF' },
   { type: 'fieldtrip', date: '2026-06-11', label: 'Field Trip' },
 
   /* 3째주 */
-    { type: 'module', start: '2026-06-15', end: '2026-06-18', label: 'Week 10: 모듈명', color:'#EADBFF' },
-  { type: 'fieldtrip', date: '2026-06-11', label: 'Field Trip' },
+    { type: 'module', start: '2026-06-15', end: '2026-06-18', label: 'Week 10: Market Planning: Market Analysis', color:'#EADBFF' },
+  { type: 'event', date: '2026-06-18', label: 'Workshop' },
+  { type: 'event', date: '2026-06-19', label: 'Workshop' },
+  { type: 'event', date: '2026-06-20', label: 'Workshop' },
 
   /* 4째주 */
-    { type: 'module', start: '2026-06-22', end: '2026-06-25', label: 'Week 11: 모듈명', color:'#EADBFF' },
-  { type: 'fieldtrip', date: '2026-06-11', label: 'Field Trip' },
+    { type: 'module', start: '2026-06-22', end: '2026-06-25', label: 'Week 11: Market Planning: Penetration', color:'#EADBFF' },
+  { type: 'fieldtrip', date: '2026-06-25', label: 'Field Trip' },
 
   /* 5째주 */
-    { type: 'module', start: '2026-06-29', end: '2026-07-02', label: 'Week 12: 모듈명' , color:'#EADBFF'},
-  { type: 'fieldtrip', date: '2026-06-11', label: 'Field Trip' },
+    { type: 'module', start: '2026-06-29', end: '2026-07-02', label: 'Week 12: Project' , color:'#EADBFF'},
+  { type: 'fieldtrip', date: '2026-07-02', label: 'Field Trip' },
 
   // ── 7월 ──────────────────────────────────────────────────────
 
   /* 2째주 */
-  { type: 'module', start: '2026-07-06', end: '2026-07-09', label: 'Week 13: 모듈명' },
-  { type: 'fieldtrip', date: '2026-07-16', label: 'Field Trip'},
+  { type: 'module', start: '2026-07-06', end: '2026-07-09', label: 'Week 13: Market Planning: Pricing ' },
+  { type: 'fieldtrip', date: '2026-07-09', label: 'Field Trip'},
 
   /* 3째주 */
-    { type: 'module', start: '2026-07-13', end: '2026-07-16', label: 'Week 14: 모듈명' },
+    { type: 'module', start: '2026-07-13', end: '2026-07-16', label: 'Week 14: Financial Planning' },
   { type: 'fieldtrip', date: '2026-07-16', label: 'Field Trip'},
   
   /* 4째주 */
-    { type: 'module', start: '2026-07-20', end: '2026-07-23', label: 'Week 15: 모듈명' },
-  { type: 'fieldtrip', date: '2026-07-16', label: 'Field Trip'},
+    { type: 'module', start: '2026-07-20', end: '2026-07-23', label: 'Week 15: Finalizing the Business Statements' },
+  { type: 'fieldtrip', date: '2026-07-23', label: 'Field Trip'},
 
    /* 5째주 */
     { type: 'module', start: '2026-07-27', end: '2026-07-30', label: 'Week 16: Final Presentation' },

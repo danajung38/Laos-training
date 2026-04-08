@@ -43,9 +43,9 @@ const CURRICULUM_DATA = {
           {
             type: 'special',
             date: 'Apr 10',
-            title: '',
+            title: 'Korea&apos;s Startup World: Culture, Companies, and What You Can Learn',
             instructor: 'Ms. Soohyun Na',
-            desc: '',
+            desc: 'Why does a small country like Korea produce global companies like Kakao, Toss, and Coupang? In this session, we&apos;ll explore the culture, mindset, and support systems behind Korea&apos;s startup ecosystem &mdash; through real stories and honest insights. Whether you&apos;re an aspiring entrepreneur or simply curious, you&apos;ll leave with a fresh perspective on what it takes to build something from scratch.',
           },
           {
             type: 'lecture',
