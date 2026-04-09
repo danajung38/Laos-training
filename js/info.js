@@ -227,11 +227,6 @@ const CARD_DATA = {
           <div class="wifi-row"><span>Available at</span><span>Universities worldwide</span></div>
         </div>
 
-        <h3>Mobile Data</h3>
-        <p>Korean telecom providers (SKT, KT, LG U+) offer short-term SIM cards and data plans at Incheon Airport and convenience stores. A 30-day unlimited data plan costs approximately ₩30,000–₩50,000.</p>
-
-     
-
         <h3>Helpful Apps</h3>
         <ul>
           <li><strong>Naver Maps</strong> — Best navigation app for Korea (Korean & English).</li>
