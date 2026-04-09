@@ -58,7 +58,7 @@ const CURRICULUM_DATA = {
       },
       {
         week: 2,
-        title: 'Chapter 2. Defining a Business Concept',
+        title: 'Chapter 2. Recognizing Opportunities',
         dates: 'Apr 20–23, 2026',
         tags: ['#Opportunities', '#Business-Ideation', '#Personal-Vision'],
         sessions: [
