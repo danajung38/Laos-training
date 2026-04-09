@@ -16,11 +16,15 @@
 const TIMETABLE_DATA = [
 
   {
-    date: '2026-04-13',
+    date: '2026-04-09',
     items: [
-      { time: '09:30 - 10:30', event: 'PEV Lecture' },
-      { time: '11:00 - 12:00', event: 'Case Study' },
-      { time: '14:00 - 15:30', event: 'Workshop' },
+      { time: '09:00 - 10:00', event: 'Orientation' },
+    ]
+  },
+  {
+    date: '2026-04-10',
+    items: [
+      { time: '10:00 - 11:30', event: 'Guest Lecture' },
     ]
   },
 
