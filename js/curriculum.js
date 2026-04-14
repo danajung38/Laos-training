@@ -101,9 +101,9 @@ const CURRICULUM_DATA = {
           {
             type: 'special',
             date: 'Apr 28',
-            title: 'untitled',
+            title: 'Business model and strategy development',
             instructor: 'Prof. Hyoungjin Lee',
-            desc: '',
+            desc: 'This lecture introduces how entrepreneurs design viable business models and translate them into actionable strategies for growth. It covers key frameworks for defining value creation, capturing revenue, and building competitive advantage under uncertainty.',
           },
           {
             type: 'fieldtrip',
