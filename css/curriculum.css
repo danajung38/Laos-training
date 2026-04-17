@@ -136,6 +136,11 @@
   box-shadow: 0 4px 18px rgba(26, 46, 74, 0.12);
 }
 
+/* ── 4번째 카드 배경색 (주황색) ── */
+.curr-list .curr-card:nth-of-type(4) {
+  background-color: #ffcc99;
+}
+
 /* 카드 헤더 (항상 보이는 부분) */
 .curr-card-header {
   display: flex;
