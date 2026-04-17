@@ -433,7 +433,7 @@ const CURRICULUM_DATA = {
       },
       {
         week: 15,
-        title: 'Chapter 12. Finalizing the Business Statements',
+        title: 'Chapter 12. Finalizing the Business Plan',
         dates: 'Jul 20–23, 2026',
         tags: ['#BusinessPlanFinalization', '#StrategicAction', '#EntrepreneurshipGoals'],
         sessions: [
@@ -441,7 +441,7 @@ const CURRICULUM_DATA = {
             type: 'lecture',
             date: 'Jul 20, 22',
             instructor: 'Prof. Byungchul Choi',
-            title: 'Finalizing the Business Statements',
+            title: 'Finalizing the Business Plan',
             desc: 'This final chapter guides you through assembling your business plan, ensuring it is clear and professional, and defining the strategic next steps to turn your vision into reality.',
           },
           {

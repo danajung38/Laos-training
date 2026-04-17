@@ -102,7 +102,7 @@ const SCHEDULE_DATA = [
   { type: 'fieldtrip', date: '2026-07-16', label: 'Field Trip'},
   
   /* 4째주 */
-    { type: 'module', start: '2026-07-20', end: '2026-07-23', label: 'Week 15: Finalizing the Business Statements' },
+    { type: 'module', start: '2026-07-20', end: '2026-07-23', label: 'Week 15: Finalizing the Business Plan' },
   { type: 'fieldtrip', date: '2026-07-23', label: 'Field Trip'},
 
    /* 5째주 */
