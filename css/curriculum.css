@@ -138,12 +138,12 @@
 
 /* ── 4번째 카드 배경색 (주황색) ── */
 .curr-list .curr-card:nth-of-type(4) {
-  background-color: #ffcc99;
+  background-color: #f8dfc8;
 }
 
 /* ── 4번째 카드 상세 영역 배경색 ── */
 .curr-list .curr-card:nth-of-type(4) .curr-card-detail {
-  background-color: #f8dfc8;
+  background-color: #fad2b4;
 }
 
 /* 카드 헤더 (항상 보이는 부분) */
