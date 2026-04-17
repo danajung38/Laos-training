@@ -141,6 +141,11 @@
   background-color: #ffcc99;
 }
 
+/* ── 4번째 카드 상세 영역 배경색 ── */
+.curr-list .curr-card:nth-of-type(4) .curr-card-detail {
+  background-color: #f8dfc8;
+}
+
 /* 카드 헤더 (항상 보이는 부분) */
 .curr-card-header {
   display: flex;
