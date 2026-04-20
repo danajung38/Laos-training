@@ -13,25 +13,23 @@
    ----------------------------------------------------------------- */
 const events = [
   {
-    id: 'orientation',
-    title: 'Orientation',
-    date: 'April 9, 2026',
-    location: 'KMU',
+    id: 'pev-visit',
+    title: 'PEV Lecture',
+    date: 'April 17, 2026',
+    location: 'Online(Zoom)',
     cover: '',
     photos: [
-      'photo/20260409_오리엔테이션.png',
-      'photo/20260409_오리엔테이션2.png',
-      'photo/20260409_오리엔테이션3.png',
-      'photo/20260409_오리엔테이션4.png',
-      'photo/20260409_오리엔테이션5.png',
-      'photo/20260409_오리엔테이션6.png'
+      'photo/20260417_PEV.png',
+      'photo/20260417_PEV2.png',
+      'photo/20260417_PEV3.png',
+      'photo/20260417_PEV4.png'
     ]
   },
   {
     id: 'guest-lecture',
     title: 'Guest Lecture',
     date: 'April 10, 2026',
-    location: 'KMU',
+    location: 'Online(Zoom)',
     cover: '',
     photos: [
       'photo/20260410_GuestLecture1.png',
@@ -40,16 +38,18 @@ const events = [
     ]
   },
   {
-    id: 'pev-visit',
-    title: 'PEV Visit',
-    date: 'April 17, 2026',
-    location: 'PEV',
+    id: 'orientation',
+    title: 'Orientation',
+    date: 'April 9, 2026',
+    location: 'Online(Zoom)',
     cover: '',
     photos: [
-      'photo/20260417_PEV.png',
-      'photo/20260417_PEV2.png',
-      'photo/20260417_PEV3.png',
-      'photo/20260417_PEV4.png'
+      'photo/20260409_오리엔테이션.png',
+      'photo/20260409_오리엔테이션2.png',
+      'photo/20260409_오리엔테이션3.png',
+      'photo/20260409_오리엔테이션4.png',
+      'photo/20260409_오리엔테이션5.png',
+      'photo/20260409_오리엔테이션6.png'
     ]
   }
 ];
