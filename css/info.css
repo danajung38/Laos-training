@@ -326,6 +326,10 @@
   /* JS가 zoom 값 설정 */
 }
 
+#infoModalContent {
+  width: 100%;
+}
+
 /* 이미지 뷰어 */
 .info-img-view {
   display: block;
@@ -336,10 +340,13 @@
 
 /* 텍스트 콘텐츠 */
 .info-text-content {
+  width: 100%;
+  box-sizing: border-box;
   padding: 32px 36px;
   font-size: 0.92rem;
   line-height: 1.85;
   color: #444;
+  text-align: left;
 }
 
 .info-text-content h3 {
