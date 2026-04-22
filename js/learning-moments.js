@@ -12,9 +12,33 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+      {
+    id: 'guest-lecture',
+    title: 'Guest Lecture',
+    date: 'April 22, 2026',
+    location: 'Online(Zoom)',
+    cover: '',
+    photos: [
+      'photo/20260422_GuestLecture1.png',
+      'photo/20260422_GuestLecture2.png',
+      'photo/20260422_GuestLecture3.png',
+      'photo/20260422_GuestLecture4.png'
+    ]
+  },
+    {
+    id: 'pev-visit',
+    title: 'PEV Lecture: Chapter 2 ',
+    date: 'April 21, 2026',
+    location: 'Online(Zoom)',
+    cover: '',
+    photos: [
+      'photo/20260421_PEV1.png',
+      'photo/20260421_PEV2.png'
+    ]
+  },
   {
     id: 'pev-visit',
-    title: 'PEV Lecture',
+    title: 'PEV Lecture: Chapter 1 ',
     date: 'April 17, 2026',
     location: 'Online(Zoom)',
     cover: '',
