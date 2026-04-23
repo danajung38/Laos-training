@@ -12,9 +12,21 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+        {
+    id: 'classroom-setup',
+    title: 'Classroom Setup for Upcoming Training!',
+    date: 'April 23, 2026',
+    location: 'Classroom 215',
+    cover: '',
+    photos: [
+      'photo/classroom1.jpg',
+      'photo/classroom2.jpg',
+      'photo/classroom3.jpg'
+    ]
+  },
       {
     id: 'guest-lecture',
-    title: 'Guest Lecture',
+    title: 'Guest Lecture(The Founder&apos;s Roadmap: Leveraging Startup Ecosystems from Campus to Global Stages)',
     date: 'April 22, 2026',
     location: 'Online(Zoom)',
     cover: '',
@@ -51,7 +63,7 @@ const events = [
   },
   {
     id: 'guest-lecture',
-    title: 'Guest Lecture',
+    title: 'Guest Lecture(Korea&apos;s Startup World: Culture, Companies, and What You Can Learn)',
     date: 'April 10, 2026',
     location: 'Online(Zoom)',
     cover: '',
@@ -126,7 +138,8 @@ function renderGrid() {
 
   gridEl.innerHTML = '';
 
-  pageItems.forEach((ev) => {
+  pageItems.forEach((ev, i) => {
+    const eventIndex = start + i; // 전체 events 배열에서의 인덱스
     const li = document.createElement('li');
     li.className = 'lm-card';
     li.setAttribute('role', 'button');
@@ -148,7 +161,7 @@ function renderGrid() {
       </p>
     `;
 
-    const open = () => openModal(ev.id, 0);
+    const open = () => openModal(eventIndex, 0);
     li.addEventListener('click', open);
     li.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
@@ -189,8 +202,8 @@ function renderPagination() {
 /* -----------------------------------------------------------------
    8) 라이트박스 모달
    ----------------------------------------------------------------- */
-function openModal(eventId, photoIdx) {
-  activeEvent    = events.find((e) => e.id === eventId);
+function openModal(eventIndex, photoIdx) {
+  activeEvent    = events[eventIndex];
   activePhotoIdx = photoIdx || 0;
   if (!activeEvent) return;
 
