@@ -101,7 +101,7 @@ const CARD_DATA = {
         <div class="wifi-card">
           <h4>KMU Official Network</h4>
           <div class="wifi-row"><span>Network Name (SSID)</span><span>KMU_WIFI</span></div>
-          <div class="wifi-row"><span>Password</span><span>kmu@2026</span></div>
+          <div class="wifi-row"><span>Password</span><span>Individual passwords will be provided via email</span></div>
           <div class="wifi-row"><span>Coverage</span><span>All academic buildings</span></div>
         </div>
 
