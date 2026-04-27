@@ -12,6 +12,19 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+          {
+    id: '',
+    title: 'PEV Lecture: Chapter 3',
+    date: 'April 27, 2026',
+    location: 'Online(Zoom)',
+    cover: '',
+    photos: [
+      'photo/20260427_PEV1.png',
+      'photo/20260427_PEV2.png',
+      'photo/20260427_PEV3.png',
+      'photo/20260427_PEV4.png'
+    ]
+  },
         {
     id: 'classroom-setup',
     title: 'Classroom Setup for Upcoming Training!',
