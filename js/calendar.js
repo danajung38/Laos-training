@@ -44,16 +44,16 @@ const SCHEDULE_DATA = [
 
   /* 3째주 */
   { type: 'module', start: '2026-04-20', end: '2026-04-23', label: 'Week 2: Recognizing Opportunities' },
-    { type: 'culturaltour', date: '2026-04-23', label: 'Cultural Tour'},
 
   /* 4째주 */
   { type: 'module', start: '2026-04-27', end: '2026-04-30', label: 'Week 3: Defining a Business Concept' },
-  { type: 'fieldtrip', date: '2026-04-30', label: 'Field Trip' },
+   { type: 'event', date: '2026-04-28', label: 'Arrived in Korea🛬' },
+
 
   // ── 5월 ──────────────────────────────────────────────────────
   /* 1째주 */
   { type: 'module', start: '2026-05-04', end: '2026-05-07', label: 'Week 4: Project' },
-  { type: 'fieldtrip', date: '2026-05-07', label: 'Field Trip' },
+  { type: 'culturaltour', date: '2026-05-07', label: 'Cultural Tour' },
 
   /* 2째주 */
   { type: 'module', start: '2026-05-11', end: '2026-05-14', label: 'Week 5: Model Feasibility checklist', color: '#FFD9B1' },
