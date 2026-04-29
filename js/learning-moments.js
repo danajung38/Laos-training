@@ -12,6 +12,55 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+                {
+    id: '',
+    title: 'First Day of KMU! (2)',
+    date: 'April 29, 2026',
+    location: 'KMU',
+    cover: 'photo/20260429_15.jpeg',
+    photos: [
+      'photo/20260429_9.JPEG',
+      'photo/20260429_10.JPEG',
+      'photo/20260429_11.JPEG',
+      'photo/20260429_12.jpeg',
+      'photo/20260429_13.jpeg',
+      'photo/20260429_14.jpeg',
+      'photo/20260429_15.jpeg',
+
+    ]
+  },
+              {
+    id: '',
+    title: 'First Day of KMU! (1)',
+    date: 'April 29, 2026',
+    location: 'KMU, classroom 215',
+    cover: 'photo/20260429_8.jpg',
+    photos: [
+      'photo/20260429_1.JPEG',
+      'photo/20260429_2.jpg',
+      'photo/20260429_3.jpeg',
+      'photo/20260429_4.jpg',
+      'photo/20260429_5.jpeg',
+      'photo/20260429_6.jpeg',
+      'photo/20260429_7.jpg',
+      'photo/20260429_8.jpg',
+    ]
+  },
+
+            {
+    id: '',
+    title: 'Arrived in Korea🛬',
+    date: 'April 28, 2026',
+    location: 'Seoul',
+    cover: 'photo/20260428_arrived2.jpg',
+    photos: [
+      'photo/20260428_arrived4.jpg',
+      'photo/20260428_arrived3.jpg',
+      'photo/20260428_arrived2.jpg',
+      'photo/20260428_arrived1.jpg',
+    ]
+  },
+
           {
     id: '',
     title: 'PEV Lecture: Chapter 3',
