@@ -26,11 +26,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: "22"
 
       - name: Install deps
-        run: npm install --no-audit --no-fund
+        run: npm install --no-audit --no-fund --no-package-lock
 
       - name: Sync from Notion
         env:
