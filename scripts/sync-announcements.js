@@ -39,10 +39,77 @@ if (!NOTION_TOKEN || !NOTION_DATABASE_ID) {
 
 const notion = new Client({ auth: NOTION_TOKEN });
 
-/* ---------- 유틸: rich_text 배열 → 평문 ---------- */
+/* ---------- 유틸: HTML 이스케이프 ---------- */
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/* ---------- 유틸: rich_text 배열 → 평문 (속성 값 읽을 때) ---------- */
 function richToPlain(arr) {
   if (!Array.isArray(arr)) return '';
   return arr.map(t => t.plain_text || '').join('');
+}
+
+/* ---------- Notion 색상 → CSS ----------
+ * Notion 의 표준 팔레트와 가깝게 매핑.
+ * - 글자색: 'gray', 'red', ... → color
+ * - 배경색: '*_background'    → background-color (글자색은 약간 진하게)
+ * --------------------------------------- */
+const NOTION_TEXT_COLORS = {
+  gray:   '#9B9A97',
+  brown:  '#64473A',
+  orange: '#D9730D',
+  yellow: '#DFAB01',
+  green:  '#0F7B6C',
+  blue:   '#0B6E99',
+  purple: '#6940A5',
+  pink:   '#AD1A72',
+  red:    '#E03E3E',
+};
+const NOTION_BG_COLORS = {
+  gray_background:   '#EBECED',
+  brown_background:  '#E9E5E3',
+  orange_background: '#FAEBDD',
+  yellow_background: '#FBF3DB',
+  green_background:  '#DDEDEA',
+  blue_background:   '#DDEBF1',
+  purple_background: '#EAE4F2',
+  pink_background:   '#F4DFEB',
+  red_background:    '#FBE4E4',
+};
+
+function colorStyle(color) {
+  if (!color || color === 'default') return '';
+  if (NOTION_TEXT_COLORS[color]) return `color:${NOTION_TEXT_COLORS[color]}`;
+  if (NOTION_BG_COLORS[color])   return `background-color:${NOTION_BG_COLORS[color]};padding:0 4px;border-radius:3px`;
+  return '';
+}
+
+/* ---------- 유틸: rich_text 배열 → HTML (본문 블록용)
+ *  Notion 서식을 보존: bold, italic, underline, strikethrough, code, color, link
+ * ------------------------------------------------------------------- */
+function richToHtml(arr) {
+  if (!Array.isArray(arr)) return '';
+  return arr.map(t => {
+    let html = escapeHtml(t.plain_text || '');
+    const ann = t.annotations || {};
+    if (ann.code)          html = `<code>${html}</code>`;
+    if (ann.bold)          html = `<strong>${html}</strong>`;
+    if (ann.italic)        html = `<em>${html}</em>`;
+    if (ann.underline)     html = `<u>${html}</u>`;
+    if (ann.strikethrough) html = `<s>${html}</s>`;
+    const cs = colorStyle(ann.color);
+    if (cs)                html = `<span style="${cs}">${html}</span>`;
+    if (t.href) {
+      const safeHref = escapeHtml(t.href);
+      html = `<a href="${safeHref}" target="_blank" rel="noopener noreferrer">${html}</a>`;
+    }
+    return html;
+  }).join('');
 }
 
 /* ---------- 유틸: Notion 속성 → 값 ---------- */
@@ -94,17 +161,18 @@ function blockToText(block) {
   const data = block[t];
   if (!data) return '';
   switch (t) {
-    case 'paragraph':           return richToPlain(data.rich_text);
-    case 'heading_1':           return richToPlain(data.rich_text);
-    case 'heading_2':           return richToPlain(data.rich_text);
-    case 'heading_3':           return richToPlain(data.rich_text);
-    case 'bulleted_list_item':  return '* ' + richToPlain(data.rich_text);
-    case 'numbered_list_item':  return '- ' + richToPlain(data.rich_text);
-    case 'quote':               return '> ' + richToPlain(data.rich_text);
-    case 'callout':             return richToPlain(data.rich_text);
-    case 'to_do':               return (data.checked ? '[x] ' : '[ ] ') + richToPlain(data.rich_text);
+    case 'paragraph':           return richToHtml(data.rich_text);
+    // 헤딩은 본문 안에서 더 굵게 보이도록 강조
+    case 'heading_1':           return '<strong>' + richToHtml(data.rich_text) + '</strong>';
+    case 'heading_2':           return '<strong>' + richToHtml(data.rich_text) + '</strong>';
+    case 'heading_3':           return '<strong>' + richToHtml(data.rich_text) + '</strong>';
+    case 'bulleted_list_item':  return '* ' + richToHtml(data.rich_text);
+    case 'numbered_list_item':  return '- ' + richToHtml(data.rich_text);
+    case 'quote':               return '> ' + richToHtml(data.rich_text);
+    case 'callout':             return richToHtml(data.rich_text);
+    case 'to_do':               return (data.checked ? '[x] ' : '[ ] ') + richToHtml(data.rich_text);
     case 'divider':             return '---';
-    case 'code':                return richToPlain(data.rich_text);
+    case 'code':                return '<code>' + richToHtml(data.rich_text) + '</code>';
     default:                    return '';
   }
 }

@@ -30,8 +30,42 @@ Notion에 공지를 작성하면 GitHub Actions가 매시간 자동으로
 
 ### 본문(Content) 작성
 공지 **본문은 페이지 본문(블록)에 직접 작성**하세요.
-지원되는 블록: 단락, 헤딩, 글머리표/번호 매기기, 인용, 콜아웃, 체크리스트, 구분선, 코드.
-표(table), 토글, 임베드 등 복잡한 블록은 평문으로만 추출됩니다.
+
+#### 지원되는 블록
+- 단락 (Text)
+- 헤딩 (Heading 1/2/3) — 한 줄 단위로 **굵게** 표시됩니다
+- 글머리표 (Bulleted list) — `* item` 형태로 표시
+- 번호 매기기 (Numbered list) — `- item` 형태로 표시
+- 인용 (Quote) — `> ...` 형태로 표시
+- 콜아웃 (Callout)
+- 체크리스트 (To-do)
+- 구분선 (Divider) — `---` 로 표시
+- 코드 (Code)
+
+> 표(table), 토글(toggle), 임베드, 이미지/파일 첨부 등은 사이트에 표시되지 않습니다.
+
+#### 지원되는 인라인 서식 (글자 단위)
+| Notion 서식 | 단축키 | 사이트 결과 |
+|---|---|---|
+| **Bold** | `Cmd/Ctrl + B` | **굵게** |
+| *Italic* | `Cmd/Ctrl + I` | *기울임* |
+| Underline | `Cmd/Ctrl + U` | <u>밑줄</u> |
+| ~~Strikethrough~~ | `Cmd/Ctrl + Shift + S` | ~~취소선~~ |
+| `Code` | `Cmd/Ctrl + E` | 고정폭 글꼴 |
+| 하이퍼링크 | `Cmd/Ctrl + K` | 클릭 가능한 링크 (새 탭에서 열림) |
+
+#### 지원되는 색상 (글자색 / 배경색)
+텍스트 선택 후 **우클릭 → Color** 메뉴, 또는 슬래시 명령어 (`/red`, `/yellow background` 등) 사용.
+
+**글자색 (9가지):** Gray, Brown, Orange, Yellow, Green, Blue, Purple, Pink, Red
+**배경색 (9가지):** 위 색의 Background 버전 (예: Yellow background → 노란 형광펜 효과)
+
+> 색상 이름은 Notion 표준 팔레트 그대로 사이트에 적용됩니다. `Default` 는 검정.
+
+#### 작성 팁
+- 단락(블록)으로 줄을 분리하세요. **한 단락 안에서 Shift+Enter 로 줄바꿈한 것**은 사이트에서 한 줄로 합쳐집니다.
+- 여러 서식을 동시에 적용 가능 (예: 빨간 글씨 + 굵게 + 밑줄).
+- 링크는 자동으로 새 탭에서 열립니다.
 
 ---
 
