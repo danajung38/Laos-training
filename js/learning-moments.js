@@ -23,6 +23,8 @@ const events = [
       'photo/20260429_10.JPEG',
       'photo/20260429_11.JPEG',
       'photo/20260429_12.jpeg',
+      'photo/20260429_16.jpeg',
+      'photo/20260429_17.jpeg',
       'photo/20260429_13.jpeg',
       'photo/20260429_14.jpeg',
       'photo/20260429_15.jpeg',
