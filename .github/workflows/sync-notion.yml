@@ -1,0 +1,51 @@
+name: Sync announcements from Notion
+
+on:
+  # 매시 정각에 자동 동기화 (UTC 기준)
+  schedule:
+    - cron: "0 * * * *"
+  # GitHub Actions 탭에서 수동 실행 가능
+  workflow_dispatch: {}
+  # 코드 수정 시에도 한 번 돌려준다 (선택)
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync-announcements.js"
+      - ".github/workflows/sync-notion.yml"
+
+permissions:
+  contents: write   # data/announcements.json 자동 commit 용
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install deps
+        run: npm install --no-audit --no-fund
+
+      - name: Sync from Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: npm run sync:notion
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/announcements.json)" ]; then
+            git add data/announcements.json
+            git commit -m "chore: sync announcements from Notion [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi

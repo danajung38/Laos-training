@@ -5,47 +5,58 @@
   const closeBtn = document.getElementById('annModalClose');
   if (!list || !backdrop) return;
 
-  const data = (typeof ANNOUNCEMENTS_DATA !== 'undefined') ? ANNOUNCEMENTS_DATA : [];
-  const recent = data.slice(0, 3); /* 최근 3개만 표시 */
-
-  /* 목록 렌더 */
-  list.innerHTML = recent.map(a => `
-    <li class="announcement-item" data-id="${a.id}" style="cursor:pointer;">
-      <span class="announcement-icon"><img src="images/${a.icon || 'icon_announce.png'}" alt="icon" style="width:36px;height:36px;object-fit:contain;"></span>
-      <div style="flex:1;">
-        <p class="announcement-title">${a.title}</p>
-        <p class="announcement-meta">${a.date} · ${a.author}</p>
-      </div>
-      <span class="ann-chevron">›</span>
-    </li>
-  `).join('');
-
-  /* 모달 열기 */
-  list.addEventListener('click', function (e) {
-    const item = e.target.closest('.announcement-item');
-    if (!item) return;
-    const id = parseInt(item.dataset.id, 10);
-    const a  = data.find(d => d.id === id);
-    if (!a) return;
-
-    document.getElementById('annModalIcon').textContent  = a.emoji || '📢';
-    document.getElementById('annModalTitle').textContent = a.title;
-    document.getElementById('annModalMeta').textContent  = `${a.date} · ${a.author}`;
-    document.getElementById('annModalBody').innerHTML    =
-      a.content.split('\n').map(line => line ? `<p>${line}</p>` : '<br>').join('');
-
-    backdrop.classList.add('ann-modal-open');
-  });
-
-  /* 모달 닫기 */
+  /* 모달 닫기 (데이터 로드 전에 먼저 바인딩해도 안전) */
   function closeModal() { backdrop.classList.remove('ann-modal-open'); }
-  closeBtn.addEventListener('click', closeModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
   backdrop.addEventListener('click', function (e) {
     if (e.target === backdrop) closeModal();
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeModal();
   });
+
+  /* 공지 데이터가 비동기로 로드되므로 ready 시점을 기다린다 */
+  function render(data) {
+    const recent = (data || []).slice(0, 3); /* 최근 3개만 표시 */
+
+    list.innerHTML = recent.map(a => `
+      <li class="announcement-item" data-id="${a.id}" style="cursor:pointer;">
+        <span class="announcement-icon"><img src="images/${a.icon || 'icon_announce.png'}" alt="icon" style="width:36px;height:36px;object-fit:contain;"></span>
+        <div style="flex:1;">
+          <p class="announcement-title">${a.title}</p>
+          <p class="announcement-meta">${a.date} · ${a.author || ''}</p>
+        </div>
+        <span class="ann-chevron">›</span>
+      </li>
+    `).join('');
+
+    /* 모달 열기 (한 번만 바인딩) */
+    if (!list.dataset.bound) {
+      list.dataset.bound = '1';
+      list.addEventListener('click', function (e) {
+        const item = e.target.closest('.announcement-item');
+        if (!item) return;
+        const id = parseInt(item.dataset.id, 10);
+        const a  = (window.ANNOUNCEMENTS_DATA || []).find(d => d.id === id);
+        if (!a) return;
+
+        document.getElementById('annModalIcon').textContent  = a.emoji || '📢';
+        document.getElementById('annModalTitle').textContent = a.title;
+        document.getElementById('annModalMeta').textContent  = `${a.date}${a.author ? ' · ' + a.author : ''}`;
+        document.getElementById('annModalBody').innerHTML    =
+          (a.content || '').split('\n').map(line => line ? `<p>${line}</p>` : '<br>').join('');
+
+        backdrop.classList.add('ann-modal-open');
+      });
+    }
+  }
+
+  /* announcements.js 가 노출하는 ANNOUNCEMENTS_READY Promise 사용 */
+  if (window.ANNOUNCEMENTS_READY && typeof window.ANNOUNCEMENTS_READY.then === 'function') {
+    window.ANNOUNCEMENTS_READY.then(render);
+  } else {
+    document.addEventListener('announcements:ready', function (e) { render(e.detail); });
+  }
 })();
 
 /* ── 타임테이블 렌더 (timetable.js 데이터 사용) ── */

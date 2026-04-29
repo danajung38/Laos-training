@@ -1,0 +1,15 @@
+{
+  "name": "laos-training-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lao-Korea Entrepreneurship Bridge - static site (announcements synced from Notion)",
+  "scripts": {
+    "sync:notion": "node scripts/sync-announcements.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.15"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

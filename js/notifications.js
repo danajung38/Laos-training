@@ -53,7 +53,7 @@
 
   /* ── 카드 목록 렌더링 ── */
   function renderList(page) {
-    const data  = ANNOUNCEMENTS_DATA;
+    const data  = (window.ANNOUNCEMENTS_DATA || []);
     const total = data.length;
     const start = (page - 1) * ITEMS_PER_PAGE;
     const items = data.slice(start, start + ITEMS_PER_PAGE);
@@ -106,7 +106,15 @@
     }
   }
 
-  /* ── 초기 렌더 ── */
-  renderList(currentPage);
+  /* ── 초기 렌더 (Notion 연동: 데이터가 비동기로 로드됨) ── */
+  function init() {
+    renderList(currentPage);
+  }
+
+  if (window.ANNOUNCEMENTS_READY && typeof window.ANNOUNCEMENTS_READY.then === 'function') {
+    window.ANNOUNCEMENTS_READY.then(init);
+  } else {
+    document.addEventListener('announcements:ready', init);
+  }
 
 })();
