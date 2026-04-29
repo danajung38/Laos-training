@@ -1,15 +1,15 @@
 {
   "_comment": "이 파일은 GitHub Actions가 Notion에서 자동 동기화합니다. 직접 수정하지 마세요.",
-  "generatedAt": "2026-04-29T07:45:55.202Z",
+  "generatedAt": "2026-04-29T07:48:27.722Z",
   "items": [
     {
       "id": 1000,
       "icon": "icon_announce.png",
       "emoji": "📢",
-      "title": "[Sample] Training Schedule Update",
+      "title": "[Assignment #1] Developing Your Own Business Concept",
       "date": "April 29, 2026",
       "author": "Program Coordinator",
-      "content": "안녕하세요! 아래 공지 내용을 확인해주세요.\n핵심 안내\n* 일정: 2026-04-29 (수)\n* 장소: Training Room A\n* 준비물: 노트북, 필기구\nTip\n> 문의: Author가 비어 있으면 Program Coordinator로 표시됩니다.\n[ ] 공지 확인 완료\n---\n(코드 블록 예시)\n추가 안내 사항을 여기에 작성할 수 있습니다."
+      "content": "Dear Participants,\nFollowing today’s lecture, we are pleased to announce your first assignment.\n\n1. Assignment Overview\nIdentify a Business Opportunity within the context of Laos and develop it into a concrete Business Concept.\n\n2. Key Guidelines\nWhen brainstorming your business idea, consider the following perspectives:\n* Market & Industry Analysis: Which industries show growth potential in the current Laotian market?\n* Problem-Solving: What specific inconveniences or existing problems do people in Laos face, and how can they be solved?\n* Demographics & Trends: What opportunities arise from changes in Laos' population structure or new lifestyle trends?\n* Personal Network & Information: How can you leverage your professional networks or unique information/resources?\n\n3. Format and Length\n* Format: MS Word\n* Length: Approximately 2 pages (A4 size)\n\n4. Submission Details\n* Submission Deadline: By this Sunday, May 3rd, 2026\n* To: bchoi@hufs.ac.kr\n* Cc (Carbon Copy): seongeun38@kookmin.ac.kr\n* Note: Your idea can be changed or modified at any time throughout the course. The primary goal is to start the journey with \"your own idea\" rather than producing a perfect final product from the start."
     }
   ]
 }
