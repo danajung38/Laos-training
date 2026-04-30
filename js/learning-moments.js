@@ -12,7 +12,21 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
-                {
+  {
+    id: '',
+    title: 'Guest Lecture: Business model and strategy development',
+    date: 'April 30, 2026',
+    location: 'KMU, Classroom 215',
+    cover: '',
+    photos: [
+      'photo/20260430_1.jpeg',
+      'photo/20260430_2.jpeg',
+      'photo/20260430_3.jpeg',
+      'photo/20260430_4.jpeg',
+      'photo/20260430_5.jpeg',
+    ]
+  },
+  {
     id: '',
     title: 'First Day of KMU! (2)',
     date: 'April 29, 2026',
@@ -31,7 +45,7 @@ const events = [
 
     ]
   },
-              {
+  {
     id: '',
     title: 'First Day of KMU! (1)',
     date: 'April 29, 2026',
@@ -49,7 +63,7 @@ const events = [
     ]
   },
 
-            {
+  {
     id: '',
     title: 'Arrived in Korea🛬',
     date: 'April 28, 2026',
@@ -63,7 +77,7 @@ const events = [
     ]
   },
 
-          {
+  {
     id: '',
     title: 'PEV Lecture: Chapter 3',
     date: 'April 27, 2026',
@@ -76,7 +90,7 @@ const events = [
       'photo/20260427_PEV4.png'
     ]
   },
-        {
+  {
     id: 'classroom-setup',
     title: 'Classroom Setup for Upcoming Training!',
     date: 'April 23, 2026',
@@ -88,9 +102,9 @@ const events = [
       'photo/classroom3.jpg'
     ]
   },
-      {
+  {
     id: 'guest-lecture',
-    title: 'Guest Lecture(The Founder&apos;s Roadmap: Leveraging Startup Ecosystems from Campus to Global Stages)',
+    title: 'Guest Lecture_The Founder&apos;s Roadmap: Leveraging Startup Ecosystems from Campus to Global Stages',
     date: 'April 22, 2026',
     location: 'Online(Zoom)',
     cover: '',
@@ -101,7 +115,7 @@ const events = [
       'photo/20260422_GuestLecture4.png'
     ]
   },
-    {
+  {
     id: 'pev-visit',
     title: 'PEV Lecture: Chapter 2 ',
     date: 'April 21, 2026',
@@ -127,7 +141,7 @@ const events = [
   },
   {
     id: 'guest-lecture',
-    title: 'Guest Lecture(Korea&apos;s Startup World: Culture, Companies, and What You Can Learn)',
+    title: 'Guest Lecture_Korea&apos;s Startup World: Culture, Companies, and What You Can Learn',
     date: 'April 10, 2026',
     location: 'Online(Zoom)',
     cover: '',
@@ -158,29 +172,29 @@ const events = [
    2) 설정
    ----------------------------------------------------------------- */
 const ITEMS_PER_PAGE = 6;
-const LOCATION_ICON  = 'images/icon_location.png';
+const LOCATION_ICON = 'images/icon_location.png';
 
 /* -----------------------------------------------------------------
    3) DOM 참조
    ----------------------------------------------------------------- */
-const gridEl        = document.getElementById('lmGrid');
-const paginationEl  = document.getElementById('lmPagination');
+const gridEl = document.getElementById('lmGrid');
+const paginationEl = document.getElementById('lmPagination');
 
 const modalBackdrop = document.getElementById('lmModalBackdrop');
-const modalImg      = document.getElementById('lmModalImg');
-const modalTitle    = document.getElementById('lmModalTitle');
-const modalMeta     = document.getElementById('lmModalMeta');
-const modalCounter  = document.getElementById('lmModalCounter');
+const modalImg = document.getElementById('lmModalImg');
+const modalTitle = document.getElementById('lmModalTitle');
+const modalMeta = document.getElementById('lmModalMeta');
+const modalCounter = document.getElementById('lmModalCounter');
 const modalCloseBtn = document.getElementById('lmModalClose');
-const modalPrevBtn  = document.getElementById('lmModalPrev');
-const modalNextBtn  = document.getElementById('lmModalNext');
+const modalPrevBtn = document.getElementById('lmModalPrev');
+const modalNextBtn = document.getElementById('lmModalNext');
 
 /* -----------------------------------------------------------------
    4) 상태
    ----------------------------------------------------------------- */
-let currentPage     = 1;
-let activeEvent     = null;   // 라이트박스에 표시 중인 event
-let activePhotoIdx  = 0;      // 해당 event 내 photo index
+let currentPage = 1;
+let activeEvent = null;   // 라이트박스에 표시 중인 event
+let activePhotoIdx = 0;      // 해당 event 내 photo index
 
 /* -----------------------------------------------------------------
    5) 유틸
@@ -267,7 +281,7 @@ function renderPagination() {
    8) 라이트박스 모달
    ----------------------------------------------------------------- */
 function openModal(eventIndex, photoIdx) {
-  activeEvent    = events[eventIndex];
+  activeEvent = events[eventIndex];
   activePhotoIdx = photoIdx || 0;
   if (!activeEvent) return;
 
@@ -281,9 +295,9 @@ function closeModal() {
   modalBackdrop.classList.remove('lm-modal-open');
   modalBackdrop.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
-  activeEvent    = null;
+  activeEvent = null;
   activePhotoIdx = 0;
-  modalImg.src   = '';
+  modalImg.src = '';
 }
 
 function showPrev() {
@@ -303,10 +317,10 @@ function showNext() {
 function updateModalView() {
   if (!activeEvent) return;
   const total = activeEvent.photos.length;
-  modalImg.src         = activeEvent.photos[activePhotoIdx];
-  modalImg.alt         = `${activeEvent.title} — ${activePhotoIdx + 1}/${total}`;
-  modalTitle.textContent   = activeEvent.title;
-  modalMeta.textContent    = `${activeEvent.date}  ·  ${activeEvent.location}`;
+  modalImg.src = activeEvent.photos[activePhotoIdx];
+  modalImg.alt = `${activeEvent.title} — ${activePhotoIdx + 1}/${total}`;
+  modalTitle.textContent = activeEvent.title;
+  modalMeta.textContent = `${activeEvent.date}  ·  ${activeEvent.location}`;
   modalCounter.textContent = `${activePhotoIdx + 1} / ${total}`;
 
   // 사진이 하나뿐이면 좌/우 버튼 숨김
@@ -330,8 +344,8 @@ modalBackdrop.addEventListener('click', (e) => {
 // 키보드 지원 (←, →, Esc)
 document.addEventListener('keydown', (e) => {
   if (!modalBackdrop.classList.contains('lm-modal-open')) return;
-  if (e.key === 'Escape')     closeModal();
-  else if (e.key === 'ArrowLeft')  showPrev();
+  if (e.key === 'Escape') closeModal();
+  else if (e.key === 'ArrowLeft') showPrev();
   else if (e.key === 'ArrowRight') showNext();
 });
 
