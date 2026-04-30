@@ -44,7 +44,8 @@ const TIMETABLE_DATA = [
     {
     date: '2026-04-30',
     items: [
-      { time: '10:45', event: 'Guest Lecture' }
+      { time: '10:45', event: 'Guest Lecture' },
+      { time: '14:00', event: 'Project' }
     ]
   },
 
