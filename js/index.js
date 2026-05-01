@@ -15,6 +15,20 @@
     if (e.key === 'Escape') closeModal();
   });
 
+  /* 모달 위에서의 휠은 backdrop이 흡수하고 모달 body로 전달
+     (window의 wheel 핸들러가 페이지 스크롤로 가로채는 것을 방지) */
+  backdrop.addEventListener('wheel', function (e) {
+    if (!backdrop.classList.contains('ann-modal-open')) return;
+    const body = document.getElementById('annModalBody');
+    if (!body) return;
+    /* 휠 타겟이 모달 body 내부가 아니면(헤더/여백/backdrop 위 등),
+       그 휠을 모달 body 스크롤로 직접 적용한다 */
+    if (!e.target.closest('.ann-modal-body')) {
+      body.scrollTop += e.deltaY;
+    }
+    e.stopPropagation();
+  }, { passive: true });
+
   /* 공지 데이터가 비동기로 로드되므로 ready 시점을 기다린다 */
   function render(data) {
     const recent = (data || []).slice(0, 3); /* 최근 3개만 표시 */
@@ -364,6 +378,13 @@
   /* ── 휠 이벤트 ── */
   window.addEventListener('wheel', function (e) {
     if (e.target.closest('.sidebar')) return;
+    /* 공지 모달이 열려 있거나 휠 타겟이 모달 내부면, 페이지 스크롤을 막지 말고
+       모달 내부의 네이티브 스크롤이 동작하도록 그대로 통과시킨다 */
+    const annBackdrop = document.getElementById('annModalBackdrop');
+    if (e.target.closest('.ann-modal') ||
+        (annBackdrop && annBackdrop.classList.contains('ann-modal-open'))) {
+      return;
+    }
     e.preventDefault();
 
     const delta = e.deltaY * 0.8;
