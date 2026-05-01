@@ -98,13 +98,7 @@ const CURRICULUM_DATA = {
             instructor: 'Prof. Hyoungjin Lee',
             desc: 'This lecture introduces how entrepreneurs design viable business models and translate them into actionable strategies for growth. It covers key frameworks for defining value creation, capturing revenue, and building competitive advantage under uncertainty.',
           },
-          {
-            type: 'culture',
-            date: 'May 1',
-            title: 'Bukchon Hanok Village',
-            location: 'Bukchon Hanok Village',
-            desc: 'Explore Korea&apos;s living history with hands-on traditional activities in the heart of Bukchon Hanok Village.',
-          },
+
         ],
       },
       {
@@ -121,11 +115,11 @@ const CURRICULUM_DATA = {
             desc: 'This project involves analyzing Laos&#39; current economic indicators to design localized Business Models (BM). Through Minimum Viable Product (MVP) planning, participants will materialize ideas and evaluate their feasibility in the real market.',
           },
           {
-            type: 'fieldtrip',
-            date: 'May 7',
-            title: 'TIPS (Tech Incubator Program for Startups Korea) & Asan Nanum Foundation',
-            location: ['TIPS Town', 'Asan Nanum Foundation'],
-            desc: 'Participants will visit TIPS Town and the Asan Nanum Foundation (MARU) to observe the Public-Private Partnership model in Korea’s startup ecosystem. This visit explores how government-led tech investment programs and private-sector-led entrepreneurship support systems create synergy to foster innovation.',
+            type: 'culture',
+            date: 'May 1',
+            title: 'Bukchon Hanok Village',
+            location: 'Bukchon Hanok Village',
+            desc: 'Explore Korea&apos;s living history with hands-on traditional activities in the heart of Bukchon Hanok Village.',
           },
         ],
       },
