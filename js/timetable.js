@@ -48,7 +48,20 @@ const TIMETABLE_DATA = [
       { time: '14:00', event: 'Project' }
     ]
   },
-
+      {
+    date: '2026-05-04',
+    items: [
+      { time: '10:00', event: 'Project Worshop' },
+      { time: '13:30', event: 'Project Workshop' }
+    ]
+  },
+      {
+    date: '2026-05-06',
+    items: [
+      { time: '10:00', event: 'Project Worshop' },
+      { time: '13:30', event: 'Project Workshop' }
+    ]
+  },
 
   // 날짜를 추가하려면 아래처럼 항목을 복사해서 붙여넣으세요:
   // {
