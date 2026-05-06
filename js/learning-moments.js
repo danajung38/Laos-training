@@ -12,6 +12,37 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+      {
+    id: '',
+    title: 'Project Workshop Presentation',
+    date: 'May 06, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260506_7.jpeg',
+    photos: [
+      'photo/20260506_1.jpeg',
+      'photo/20260506_2.jpeg',
+      'photo/20260506_3.jpeg',
+      'photo/20260506_4.jpeg',
+      'photo/20260506_5.jpeg',
+      'photo/20260506_6.jpeg',
+      'photo/20260506_7.jpeg',
+      'photo/20260506_8.jpeg',
+      'photo/20260506_9.jpeg',
+      'photo/20260506_10.jpeg'
+    ]
+  },
+    {
+    id: '',
+    title: 'Project Workshop',
+    date: 'May 04, 2026',
+    location: 'KMU, Classroom 215',
+    cover: '',
+    photos: [
+      'photo/20260504_1.jpeg',
+      'photo/20260504_2.jpeg',
+      'photo/20260504_3.jpeg'
+    ]
+  },
   {
     id: '',
     title: 'Guest Lecture: Business model and strategy development',
@@ -41,8 +72,7 @@ const events = [
       'photo/20260429_17.jpeg',
       'photo/20260429_13.jpeg',
       'photo/20260429_14.jpeg',
-      'photo/20260429_15.jpeg',
-
+      'photo/20260429_15.jpeg'
     ]
   },
   {
@@ -73,7 +103,7 @@ const events = [
       'photo/20260428_arrived4.jpg',
       'photo/20260428_arrived3.jpg',
       'photo/20260428_arrived2.jpg',
-      'photo/20260428_arrived1.jpg',
+      'photo/20260428_arrived1.jpg'
     ]
   },
 

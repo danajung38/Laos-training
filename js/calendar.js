@@ -57,7 +57,7 @@ const SCHEDULE_DATA = [
 
   /* 2째주 */
   { type: 'module', start: '2026-05-11', end: '2026-05-14', label: 'Week 5: Model Feasibility checklist', color: '#FFD9B1' },
-  { type: 'fieldtrip', date: '2026-05-14', label: 'Field Trip' },
+  // { type: 'fieldtrip', date: '2026-05-14', label: 'Field Trip' },
 
   /* 3째주 */
     { type: 'module', start: '2026-05-18', end: '2026-05-21', label: 'Week 6: Product/Service Planning', color: '#FFD9B1' },
