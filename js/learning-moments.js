@@ -12,6 +12,29 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+        {
+    id: '',
+    title: 'Cultural Tour: Gyeongbokgung Palace & Bukchon Hanok Village',
+    date: 'May 07, 2026',
+    location: 'Gyeongbokgung & Bukchon Hanok Village',
+    cover: '',
+    photos: [
+      'photo/20260507_1.jpeg',
+      'photo/20260507_2.jpeg',
+      'photo/20260507_3.jpeg',
+      'photo/20260507_4.jpeg',
+      'photo/20260507_5.jpeg',
+      'photo/20260507_6.jpeg',
+      'photo/20260507_7.jpeg',
+      'photo/20260507_8.jpeg',
+      'photo/20260507_9.jpeg',
+      'photo/20260507_10.jpeg',
+      'photo/20260507_11.jpeg',
+      'photo/20260507_12.jpeg',
+      'photo/20260507_13.jpeg',
+      'photo/20260507_14.jpeg',
+    ]
+  },
       {
     id: '',
     title: 'Project Workshop Presentation',

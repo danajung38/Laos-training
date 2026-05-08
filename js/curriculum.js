@@ -116,9 +116,9 @@ const CURRICULUM_DATA = {
           },
           {
             type: 'culture',
-            date: 'May 1',
-            title: 'Bukchon Hanok Village',
-            location: 'Bukchon Hanok Village',
+            date: 'May 7',
+            title: 'Gyeongbokgung Palace & Bukchon Hanok Village Tour',
+            location: 'Gyeongbokgung Palace & Bukchon Hanok Village',
             desc: 'Explore Korea&apos;s living history with hands-on traditional activities in the heart of Bukchon Hanok Village.',
           },
         ],
