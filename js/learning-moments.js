@@ -12,6 +12,21 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+          {
+    id: '',
+    title: 'Guest Lecture: Korean SME Supporting Policy',
+    date: 'May 12, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260512_4.jpeg',
+    photos: [
+      'photo/20260512_1.jpeg',
+      'photo/20260512_2.jpeg',
+      'photo/20260512_3.jpeg',
+      'photo/20260512_4.jpeg',
+      'photo/20260512_5.jpeg',
+      'photo/20260512_6.jpeg',
+    ]
+  },
         {
     id: '',
     title: 'Cultural Tour: Gyeongbokgung Palace & Bukchon Hanok Village',
@@ -71,7 +86,7 @@ const events = [
     title: 'Guest Lecture: Business model and strategy development',
     date: 'April 30, 2026',
     location: 'KMU, Classroom 215',
-    cover: '',
+    cover: 'photo/20260430_5.jpeg',
     photos: [
       'photo/20260430_1.jpeg',
       'photo/20260430_2.jpeg',

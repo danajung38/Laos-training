@@ -137,7 +137,7 @@ const CURRICULUM_DATA = {
         sessions: [
           {
             type: 'lecture',
-            date: 'May 11, May 13',
+            date: 'May 11, May 15',
             instructor: 'Prof. Byungchul Choi',
             title: 'Model Feasibility checklist',
             desc: 'This chapter focuses on analyzing the feasibility of a business model by evaluating its product, market, and financial viability.',
