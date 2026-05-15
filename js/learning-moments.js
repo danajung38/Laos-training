@@ -12,6 +12,36 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+     {
+    id: '',
+    title: 'PEV Lecture: Chapter 4',
+    date: 'May 15, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260515_1.jpeg',
+    photos: [
+      'photo/20260515_1.jpeg',
+      'photo/20260515_2.jpeg',
+      'photo/20260515_3.jpeg',
+      'photo/20260515_4.jpeg',
+      'photo/20260515_5.jpeg',
+    ]
+  },
+            {
+    id: '',
+    title: 'Project Workshop',
+    date: 'May 14, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260514_1.jpeg',
+    photos: [
+      'photo/20260514_1.jpeg',
+      'photo/20260514_2.jpeg',
+      'photo/20260514_3.jpeg',
+      'photo/20260514_4.jpeg',
+      'photo/20260514_5.jpeg',
+      'photo/20260514_6.jpeg',
+      'photo/20260514_7.jpeg',
+    ]
+  },
           {
     id: '',
     title: 'Guest Lecture: Korean SME Supporting Policy',
