@@ -1,15 +1,24 @@
 {
   "_comment": "이 파일은 GitHub Actions가 Notion에서 자동 동기화합니다. 직접 수정하지 마세요.",
-  "generatedAt": "2026-05-15T02:49:07.764Z",
+  "generatedAt": "2026-05-15T06:31:57.047Z",
   "items": [
     {
       "id": 1000,
-      "icon": "icon_announce.png",
+      "icon": "icon_announced.png",
       "emoji": "📢",
       "title": "[Assignment #1] Developing Your Own Business Concept",
       "date": "April 29, 2026",
       "author": "Program Coordinator",
       "content": "Dear Participants,\nFollowing today’s lecture, we are pleased to announce your <strong>first assignment</strong>.\n\n<strong><strong>1. Assignment Overview</strong></strong>\nIdentify a <strong>Business Opportunity</strong> within the context of Laos and develop it into a concrete <strong>Business Concept</strong>.\n\n<strong><strong>2. Key Guidelines</strong></strong>\nWhen brainstorming your business idea, consider the following perspectives:\n* <strong>Market &amp; Industry Analysis:</strong> Which industries show growth potential in the current Laotian market?\n* <strong>Problem-Solving:</strong> What specific inconveniences or existing problems do people in Laos face, and how can they be solved?\n* <strong>Demographics &amp; Trends:</strong> What opportunities arise from changes in Laos' population structure or new lifestyle trends?\n* <strong>Personal Network &amp; Information:</strong> How can you leverage your professional networks or unique information/resources?\n\n<strong><strong>3. Format and Length</strong></strong>\n* <strong>Format:</strong> MS Word\n* <strong>Length:</strong> Approximately <strong>2 pages</strong> (A4 size)\n\n<strong><strong>4. Submission Details</strong></strong>\n* <strong>Submission Deadline:</strong> <strong>By this Sunday, May 3rd, 2026</strong>\n* <strong>To:</strong> bchoi@hufs.ac.kr\n* <strong>Cc (Carbon Copy):</strong> seongeun38@kookmin.ac.kr\n* <strong>Note:</strong> Your idea can be changed or modified at any time throughout the course. The primary goal is to start the journey with <strong>&quot;your own idea&quot;</strong> rather than producing a perfect final product from the start."
+    },
+    {
+      "id": 999,
+      "icon": "icon_announce.png",
+      "emoji": "📢",
+      "title": "🏮Lotus Lantern Festival(Yeondeunghoe) 2026 ",
+      "date": "May 15, 2026",
+      "author": "Program Coordinator",
+      "content": "The festival is a UNESCO Intangible Cultural Heritage.\nHere is the schedule for this weekend's main events in Seoul!\n\n<strong>Dates:</strong> Saturday, May 16 – Sunday, May 17, 2026\n\n<strong>1. Main Event: Lotus Lantern Parade</strong> 🐉\n* <strong>When:</strong> Saturday, May 16 | 7:00 PM – 9:30 PM\n* <strong>Where:</strong> From Heunginjimun (Dongdaemun) → along Jongno Street → Jogyesa Temple\n* <strong>Tip:</strong> This is the highlight of the festival with over 100,000 lanterns!\n\n<strong>2. Post-Parade Celebration (Daedong Hanmadang)</strong> 🎊\n* <strong>When:</strong> Saturday, May 16 | 9:30 PM – 11:00 PM\n* <strong>Where:</strong> Jonggak Intersection\n* <strong>Details:</strong> Flower rain (confetti) and traditional dancing.\n\n<strong>3. Traditional Culture Events</strong> 🎨\n* <strong>When:</strong> Sunday, May 17 | 11:00 AM – 7:00 PM\n* <strong>Where:</strong> The street in front of Jogyesa Temple\n* <strong>Details:</strong> Experience making lanterns, trying temple food, and traditional games.\n\n<strong>4. Final Celebration (Yeondeungnori)</strong> ✨\n* <strong>When:</strong> Sunday, May 17 | 7:00 PM – 9:00 PM\n* <strong>Where:</strong> Insadong to Jogyesa Temple street\n* <strong>Details:</strong> A final, smaller-scale parade and concert to wrap up the festival.\n\n📍 <strong>How to get there:</strong> The best way is by Subway!\n* <strong>Line 1:</strong> Jonggak Station, Jongno 3-ga Station, or Dongdaemun Station.\n* <strong>Line 3:</strong> Anguk Station.\n⚠️ <strong>Note:</strong> There will be major road closures in the Jongno area during the parade, so using the subway is highly recommended!"
     }
   ]
 }
