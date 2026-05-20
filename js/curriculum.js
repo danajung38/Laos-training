@@ -152,7 +152,7 @@ const CURRICULUM_DATA = {
           {
             type: 'lecture',
             date: 'May 14',
-            title: 'Project',
+            title: 'Project Worhshoop',
             instructor: 'Prof. Woo Lee',
             desc: '',
           },
@@ -166,24 +166,17 @@ const CURRICULUM_DATA = {
         sessions: [
           {
             type: 'lecture',
-            date: 'May 18, 20',
+            date: 'May 18, 19, 20',
             instructor: 'Prof. Woo Lee',
             title: 'Product/Service Planning',
             desc: 'This chapter covers defining your product or service, ensuring its protection, and complying with government regulations to draft the product section of a business plan.',
           },
           {
-            type: 'special',
-            date: 'May 19',
-            title: '',
-            instructor: '',
-            desc: '',
-          },
-          {
             type: 'fieldtrip',
             date: 'May 21',
-            title: '',
-            location: 'AWS',
-            desc: '',
+            title: 'Social Innovation Insight: MYSC',
+            location: 'MYSC',
+            desc: 'We will visit MYSC, an impact investment and startup accelerator, to explore strategies for solving social problems through startups and discuss pathways for global cooperation',
           },
         ],
       },
