@@ -113,7 +113,7 @@ const TIMETABLE_DATA = [
     {
     date: '2026-05-21',
     items: [
-      { time: '14:00', event: 'Field Trip' },
+      { time: '11:00', event: 'Field Trip' },
     ]
   },
 
