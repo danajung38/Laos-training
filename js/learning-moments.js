@@ -12,6 +12,54 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+      {
+    id: '',
+    title: 'PEV Lecture: Chapter 6',
+    date: 'May 22, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260522_2.jpeg',
+    photos: [
+      'photo/20260522_1.jpeg',
+      'photo/20260522_2.jpeg',
+      'photo/20260522_3.jpeg',
+      'photo/20260522_4.jpeg',
+      'photo/20260522_5.jpeg',
+    ]
+  },
+    {
+    id: '',
+    title: 'Field Trip: Social Innovation Insight_MYSC ',
+    date: 'May 21, 2026',
+    location: 'SeongSu-Dong & MYSC',
+    cover: '',
+    photos: [
+      'photo/20260521_1.jpeg',
+      'photo/20260521_2.jpeg',
+      'photo/20260521_3.jpeg',
+      'photo/20260521_4.jpeg',
+      'photo/20260521_5.jpeg',
+      'photo/20260521_6.jpeg',
+      'photo/20260521_7.jpeg',
+      'photo/20260521_8.jpeg',
+      'photo/20260521_9.jpeg',
+
+    ]
+  },
+           {
+    id: '',
+    title: 'PEV Lecture: Chapter 5',
+    date: 'May 20, 2026',
+    location: 'KMU, Classroom 215',
+    cover: '',
+    photos: [
+      'photo/20260520_1.jpeg',
+      'photo/20260520_2.jpeg',
+      'photo/20260520_3.jpeg',
+      'photo/20260520_4.jpeg',
+      'photo/20260520_5.jpeg',
+
+    ]
+  },
          {
     id: '',
     title: 'PEV Lecture: Chapter 5',

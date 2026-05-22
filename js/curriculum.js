@@ -188,7 +188,7 @@ const CURRICULUM_DATA = {
         sessions: [
           {
             type: 'lecture',
-            date: 'May 25, 28',
+            date: 'May 28',
             instructor: 'Prof. Woo Lee',
             title: 'Management & Organization Planning',
             desc: 'This chapter covers selecting a legal structure, building a management team, and developing strategies for recruiting, retaining, and outsourcing talent.',
@@ -198,13 +198,6 @@ const CURRICULUM_DATA = {
             date: 'May 26',
             title: '',
             instructor: '',
-            desc: '',
-          },
-          {
-            type: 'fieldtrip',
-            date: 'May 28',
-            title: '',
-            location: 'Kakao',
             desc: '',
           },
         ],
