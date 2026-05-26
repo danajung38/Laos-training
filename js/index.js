@@ -57,8 +57,7 @@
         document.getElementById('annModalIcon').textContent  = a.emoji || '📢';
         document.getElementById('annModalTitle').textContent = a.title;
         document.getElementById('annModalMeta').textContent  = `${a.date}${a.author ? ' · ' + a.author : ''}`;
-        document.getElementById('annModalBody').innerHTML    =
-          (a.content || '').split('\n').map(line => line ? `<p>${line}</p>` : '<br>').join('');
+        document.getElementById('annModalBody').innerHTML = a.content || '';
 
         backdrop.classList.add('ann-modal-open');
       });

@@ -31,10 +31,7 @@
     modalIcon.textContent  = item.emoji || '📢';
     modalTitle.textContent = item.title;
     modalMeta.textContent  = item.date + (item.author ? '  ·  ' + item.author : '');
-    modalBody.innerHTML = item.content
-      .split('\n')
-      .map(function (line) { return '<p>' + (line || '&nbsp;') + '</p>'; })
-      .join('');
+    modalBody.innerHTML = item.content || '';
     backdrop.classList.add('ann-modal-open');
   }
 
