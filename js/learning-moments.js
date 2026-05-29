@@ -14,6 +14,48 @@
 const events = [
       {
     id: '',
+    title: 'Project Workshop',
+    date: 'May 29, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260529_5.jpeg',
+    photos: [
+      'photo/20260529_1.jpeg',
+      'photo/20260529_2.jpeg',
+      'photo/20260529_3.jpeg',
+      'photo/20260529_4.jpeg',
+      'photo/20260529_5.jpeg',
+      'photo/20260529_6.jpeg',
+    ]
+  },
+    {
+    id: '',
+    title: 'PEV Lecture: Chapter 6',
+    date: 'May 28, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260528_4.jpeg',
+    photos: [
+      'photo/20260528_1.jpeg',
+      'photo/20260528_2.jpeg',
+      'photo/20260528_3.jpeg',
+      'photo/20260528_4.jpeg',
+    ]
+  },
+        {
+    id: '',
+    title: 'Guest Lecture: South Korean Startup Ecosystem Analysis',
+    date: 'May 27, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260527_4.jpeg',
+    photos: [
+      'photo/20260527_1.jpeg',
+      'photo/20260527_2.jpeg',
+      'photo/20260527_3.jpeg',
+      'photo/20260527_4.jpeg',
+      'photo/20260527_5.jpeg',
+    ]
+  },
+      {
+    id: '',
     title: 'PEV Lecture: Chapter 6',
     date: 'May 22, 2026',
     location: 'KMU, Classroom 215',
