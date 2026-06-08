@@ -14,8 +14,21 @@
 const events = [
       {
     id: '',
+    title: 'PEV Lecture: Chapter 7',
+    date: 'June 8, 2026',
+    location: 'KMU, Classroom 215',
+    cover: '',
+    photos: [
+      'photo/20260608_1.jpeg',
+      'photo/20260608_2.jpeg',
+      'photo/20260608_3.jpeg',
+      'photo/20260608_4.jpeg',
+    ]
+  },
+      {
+    id: '',
     title: 'Mallipo Workshop: Fellowship & Dinner',
-    date: 'June 4, 2026',
+    date: 'June 4-5, 2026',
     location: 'KMU Mallipo Education & Training Cente',
     cover: 'photo/20260604_5.jpeg',
     photos: [
@@ -31,7 +44,7 @@ const events = [
     {
     id: '',
     title: 'Mallipo Workshop: Mid-Term Presentation',
-    date: 'June 4, 2026',
+    date: 'June 4-5, 2026',
     location: 'KMU Mallipo Education & Training Cente',
     cover: 'photo/20260604_seminar2.jpeg',
     photos: [

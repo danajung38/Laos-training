@@ -238,17 +238,10 @@ const CURRICULUM_DATA = {
         sessions: [
           {
             type: 'lecture',
-            date: 'Jun 8, 10',
-            instructor: 'Prof. Woo Lee',
+            date: 'Jun 8, 9, 10',
+            instructor: 'Prof. Byungchul Choi',
             title: 'Market Planning: Industry & Competition',
             desc: 'This chapter focuses on analyzing the industry and competition to develop a strategic marketing plan that positions your business effectively',
-          },
-          {
-            type: 'special',
-            date: '',
-            title: '',
-            guest: '',
-            desc: '',
           },
           {
             type: 'fieldtrip',
