@@ -14,6 +14,75 @@
 const events = [
       {
     id: '',
+    title: 'Mallipo Workshop: Fellowship & Dinner',
+    date: 'June 4, 2026',
+    location: 'KMU Mallipo Education & Training Cente',
+    cover: 'photo/20260604_5.jpeg',
+    photos: [
+      'photo/20260604_1.jpeg',
+      'photo/20260604_2.jpeg',
+      'photo/20260604_3.jpeg',
+      'photo/20260604_4.jpeg',
+      'photo/20260604_5.jpeg',
+      'photo/20260604_6.jpeg',
+      'photo/20260604_7.jpeg',
+    ]
+  },
+    {
+    id: '',
+    title: 'Mallipo Workshop: Mid-Term Presentation',
+    date: 'June 4, 2026',
+    location: 'KMU Mallipo Education & Training Cente',
+    cover: 'photo/20260604_seminar2.jpeg',
+    photos: [
+      'photo/20260604_seminar1.jpeg',
+      'photo/20260604_seminar2.jpeg',
+      'photo/20260604_seminar3.jpeg',
+      'photo/20260604_seminar4.jpeg',
+      'photo/20260604_seminar5.jpeg',
+      'photo/20260604_seminar6.jpeg',
+      'photo/20260604_seminar7.jpeg',
+      'photo/20260604_seminar8.jpeg',
+      'photo/20260604_seminar9.jpeg',
+      'photo/20260604_seminar10.jpeg',
+      'photo/20260604_seminar11.jpeg',
+      'photo/20260604_seminar12.jpeg',
+      'photo/20260604_seminar13.jpeg',
+      'photo/20260604_seminar14.jpeg',
+    ]
+  },
+          {
+    id: '',
+    title: 'Project Workshop & Team building Activity ',
+    date: 'June 2, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260602_3.jpeg',
+    photos: [
+      'photo/20260602_1.jpeg',
+      'photo/20260602_2.jpeg',
+      'photo/20260602_3.jpeg',
+      'photo/20260602_4.jpeg',
+      'photo/20260602_5.jpeg',
+      'photo/20260602_6.jpeg',
+      'photo/20260602_7.jpeg',
+    ]
+  },
+        {
+    id: '',
+    title: 'Project Workshop',
+    date: 'June 1, 2026',
+    location: 'KMU, Classroom 215',
+    cover: '',
+    photos: [
+      'photo/20260601_1.jpeg',
+      'photo/20260601_2.jpeg',
+      'photo/20260601_3.jpeg',
+      'photo/20260601_4.jpeg',
+    ]
+  },
+
+      {
+    id: '',
     title: 'Project Workshop',
     date: 'May 29, 2026',
     location: 'KMU, Classroom 215',
@@ -143,6 +212,8 @@ const events = [
       'photo/20260515_3.jpeg',
       'photo/20260515_4.jpeg',
       'photo/20260515_5.jpeg',
+      'photo/20260515_6.jpeg',
+      'photo/20260515_7.jpeg',
     ]
   },
             {
