@@ -24,6 +24,7 @@ const events = [
       'photo/20260615_3.jpeg',
       'photo/20260615_4.jpeg',
       'photo/20260615_5.jpeg',
+      'photo/20260615_6.jpeg',
     ]
   },
      {
