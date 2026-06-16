@@ -182,9 +182,27 @@ const TIMETABLE_DATA = [
     ]
   },
     {
-    date: '2026-06-16',
+    date: '2026-06-17',
     items: [
       { time: '10:00', event: 'PEV' },
+    ]
+  },
+      {
+    date: '2026-06-18',
+    items: [
+      { time: '08:00-21:00', event: 'Busan Workshop' },
+    ]
+  },
+      {
+    date: '2026-06-19',
+    items: [
+      { time: '08:00-21:00', event: 'Busan Workshop' },
+    ]
+  },
+      {
+    date: '2026-06-20',
+    items: [
+      { time: '08:00-16:00', event: 'Busan Workshop' },
     ]
   },
 
