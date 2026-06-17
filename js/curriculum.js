@@ -290,7 +290,7 @@ const CURRICULUM_DATA = {
         sessions: [
           {
             type: 'lecture',
-            date: 'Jun 22, 24',
+            date: 'Jun 24',
             instructor: 'Prof. Byungchul Choi',
             title: 'Market Planning: Penetration',
             desc: 'This chapter explores building a business brand and developing effective communication strategies to successfully reach and penetrate your target market.',
