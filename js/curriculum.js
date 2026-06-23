@@ -295,20 +295,6 @@ const CURRICULUM_DATA = {
             title: 'Market Planning: Penetration',
             desc: 'This chapter explores building a business brand and developing effective communication strategies to successfully reach and penetrate your target market.',
           },
-          {
-            type: 'special',
-            date: '',
-            title: '',
-            guest: '',
-            desc: '',
-          },
-          {
-            type: 'fieldtrip',
-            date: 'Jun 25',
-            title: '',
-            location: '',
-            desc: '',
-          },
         ],
       },
       {

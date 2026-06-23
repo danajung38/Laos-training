@@ -14,6 +14,61 @@
 const events = [
   {
     id: '',
+    title: 'Busan Workshop: DAY 3',
+    date: 'June 20, 2026',
+    location: 'Busan',
+    cover: 'photo/20260620_7.jpeg',
+    photos: [
+      'photo/20260620_1.jpeg',
+      'photo/20260620_2.jpeg',
+      'photo/20260620_3.jpeg',
+      'photo/20260620_4.jpeg',
+      'photo/20260620_5.jpeg',
+      'photo/20260620_6.jpeg',
+      'photo/20260620_7.jpeg',
+      'photo/20260620_8.jpeg',
+      'photo/20260620_9.jpeg',
+    ]
+  },
+      {
+    id: '',
+    title: 'Busan Workshop: DAY 2',
+    date: 'June 19, 2026',
+    location: 'Busan',
+    cover: 'photo/20260619_7.jpeg',
+    photos: [
+      'photo/20260619_1.jpeg',
+      'photo/20260619_2.jpeg',
+      'photo/20260619_3.jpeg',
+      'photo/20260619_4.jpeg',
+      'photo/20260619_5.jpeg',
+      'photo/20260619_6.jpeg',
+      'photo/20260619_7.jpeg',
+      'photo/20260619_8.jpeg'
+    ]
+  },
+    {
+    id: '',
+    title: 'Busan Workshop: DAY 1',
+    date: 'June 18, 2026',
+    location: 'Busan',
+    cover: '',
+    photos: [
+      'photo/20260618_1.jpeg',
+      'photo/20260618_2.jpeg',
+      'photo/20260618_3.jpeg',
+      'photo/20260618_4.jpeg',
+      'photo/20260618_5.jpeg',
+      'photo/20260618_6.jpeg',
+      'photo/20260618_7.jpeg',
+      'photo/20260618_8.jpeg',
+      'photo/20260618_9.jpeg',
+      'photo/20260618_10.jpeg',
+      'photo/20260618_11.jpeg',
+    ]
+  },
+  {
+    id: '',
     title: 'PEV Lecture: Chapter 8',
     date: 'June 17, 2026',
     location: 'KMU, Classroom 215',
