@@ -349,7 +349,7 @@ const CURRICULUM_DATA = {
       },
       {
         week: 14,
-        title: '',
+        title: 'Project: Final Business Plan Strategy & Feedback Session',
         dates: 'Jul 13–16, 2026',
         tags: [''],
         sessions: [
@@ -358,7 +358,7 @@ const CURRICULUM_DATA = {
             date: 'Jul 14, 15',
             instructor: 'Prof. Woo Lee',
             title: 'Finalizing the Business Plan',
-            desc: 'This final chapter guides you through assembling your business plan, ensuring it is clear and professional, and defining the strategic next steps to turn your vision into reality.',
+            desc: 'This intensive mentoring session is designed to refine and finalize participants&apos; business plans ahead of the final presentation. Trainees will pitch their interim proposals and receive strategic feedback from faculty experts to bridge remaining gaps. The session aims to maximize the feasibility and professional quality of each business model for successful real-world implementation.',
           },
           {
             type: 'fieldtrip',
