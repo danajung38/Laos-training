@@ -88,18 +88,18 @@ const SCHEDULE_DATA = [
   { type: 'fieldtrip', date: '2026-06-25', label: 'Field Trip' },
 
   /* 5째주 */
-    { type: 'module', start: '2026-06-29', end: '2026-07-02', label: 'Week 12: Project' , color:'#EADBFF'},
-  { type: 'fieldtrip', date: '2026-07-02', label: 'Field Trip' },
+    { type: 'module', start: '2026-06-29', end: '2026-07-03', label: 'Week 12: Project' , color:'#EADBFF'},
+  { type: 'fieldtrip', date: '2026-07-03', label: 'Field Trip' },
 
   // ── 7월 ──────────────────────────────────────────────────────
 
   /* 2째주 */
   { type: 'module', start: '2026-07-06', end: '2026-07-09', label: 'Week 13: Market Planning: Pricing ' },
-  { type: 'fieldtrip', date: '2026-07-09', label: 'Field Trip'},
+  { type: 'fieldtrip', date: '2026-07-07', label: 'Field Trip'},
 
   /* 3째주 */
     { type: 'module', start: '2026-07-13', end: '2026-07-16', label: 'Week 14: Financial Planning' },
-  { type: 'fieldtrip', date: '2026-07-16', label: 'Field Trip'},
+  { type: 'fieldtrip', date: '2026-07-13', label: 'Field Trip'},
   
   /* 4째주 */
     { type: 'module', start: '2026-07-20', end: '2026-07-23', label: 'Week 15: Finalizing the Business Plan' },

@@ -362,10 +362,10 @@ const CURRICULUM_DATA = {
           },
           {
             type: 'fieldtrip',
-            date: 'Jul 16',
-            title: '',
+            date: 'Jul 13',
+            title: 'Navigating Korea’s Startup Ecosystem: Field Trip to Asan Nanum Foundation, TIPS, and MARU',
             location: '',
-            desc: '',
+            desc: 'This field trip is designed to explore Korea’s leading startup support organizations and innovation platforms to understand current entrepreneurial trends. By visiting the hubs of TIPS and MARU, participants will firsthand observe the infrastructure and growth models driving the domestic startup ecosystem',
           },
         ],
       },
@@ -381,13 +381,6 @@ const CURRICULUM_DATA = {
             instructor: 'Prof. Byungchul Choi',
             title: 'Finalizing the Business Plan',
             desc: 'This final chapter guides you through assembling your business plan, ensuring it is clear and professional, and defining the strategic next steps to turn your vision into reality.',
-          },
-          {
-            type: 'special',
-            date: 'Jul 21',
-            title: '',
-            instructor: '',
-            desc: '',
           },
           {
             type: 'fieldtrip',
