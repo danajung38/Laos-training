@@ -12,6 +12,24 @@
       · cover 가 비어있으면 photos[0] 이 자동으로 사용됨
    ----------------------------------------------------------------- */
 const events = [
+  {
+    id: '',
+    title: 'Field Trip: Navigating Korea’s Startup Ecosystem',
+    date: 'July 13, 2026',
+    location: 'Asan Nanum Foundation, TIPS, and MARU',
+    cover: 'photo/20260713_4.jpeg',
+    photos: [
+      'photo/20260713_1.jpeg',
+      'photo/20260713_2.jpeg',
+      'photo/20260713_3.jpeg',
+      'photo/20260713_4.jpeg',
+      'photo/20260713_5.jpeg',
+      'photo/20260713_6.jpeg',
+      'photo/20260713_7.jpeg',
+      'photo/20260713_8.jpeg',
+      'photo/20260713_9.jpeg'
+    ]
+  },
    {
     id: '',
     title: 'PEV Lecture: Chapter 11',
