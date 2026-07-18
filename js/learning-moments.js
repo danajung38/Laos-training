@@ -14,6 +14,31 @@
 const events = [
   {
     id: '',
+    title: 'PEV Lecture & Project',
+    date: 'July 15, 2026',
+    location: 'KMU, Classroom 215',
+    cover: '',
+    photos: [
+      'photo/20260715_1.jpeg',
+      'photo/20260715_2.jpeg',
+      'photo/20260715_3.jpeg'
+    ]
+  },
+  {
+    id: '',
+    title: 'PEV Lecture & Project',
+    date: 'July 14, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260714_4.jpeg',
+    photos: [
+      'photo/20260714_1.jpeg',
+      'photo/20260714_2.jpeg',
+      'photo/20260714_3.jpeg',
+      'photo/20260714_4.jpeg'
+    ]
+  },
+  {
+    id: '',
     title: 'Field Trip: Navigating Korea’s Startup Ecosystem',
     date: 'July 13, 2026',
     location: 'Asan Nanum Foundation, TIPS, and MARU',
