@@ -1,7 +1,16 @@
 {
   "_comment": "이 파일은 GitHub Actions가 Notion에서 자동 동기화합니다. 직접 수정하지 마세요.",
-  "generatedAt": "2026-07-23T00:04:06.306Z",
+  "generatedAt": "2026-07-23T04:13:08.190Z",
   "items": [
+    {
+      "id": 5,
+      "icon": "icon_announce.png",
+      "emoji": "📢",
+      "title": "Grand Final Pitching & Completion Ceremony",
+      "date": "July 22, 2026",
+      "author": "Program Coordinator",
+      "content": "<p>Hello everyone!</p>\n<p>We are pleased to announce the <strong>Grand Final Pitching &amp; Completion Ceremony</strong> for the Kauffman FastTrac Certificate Program.</p>\n<p>This ceremony will be a meaningful occasion where <strong>you will present the final outcomes of your projects</strong> developed throughout the program, receive valuable feedback from our professors, and reflect on the achievements of your training.</p>\n<p>Please join us to celebrate your hard work and successful completion of the program!</p>\n<p><br></p>\n<h4 class=\"ann-h\">📌 Event Overview</h4>\n<ul><li><strong>Event Name:</strong> Grand Final Pitching &amp; Completion Ceremony</li><li><strong>Date &amp; Time:</strong> Monday, July 27, 2026 / 14:00 – 16:00</li><li><strong>Location:</strong> Kookmin University Campus Town(<a href=\"https://naver.me/FK5vMSy2\" target=\"_blank\" rel=\"noopener noreferrer\">https://naver.me/FK5vMSy2</a>)</li></ul>\n<p><br></p>\n<p>🕒 Program Schedule</p>\n<table class=\"ann-table\">\n  <tr>\n    <td><strong>Time</strong></td>\n    <td><strong>Agenda</strong></td>\n    <td>Details</td>\n  </tr>\n  <tr>\n    <td>14:00 - 15:00</td>\n    <td>Grand Final Pitching</td>\n    <td>Trainee Project Presentations</td>\n  </tr>\n  <tr>\n    <td>15:00 - 15:30</td>\n    <td>Reflection &amp; Feedback</td>\n    <td>Faculty Feedback &amp; Program Review</td>\n  </tr>\n  <tr>\n    <td>15:30 - 16:00</td>\n    <td>Certificate Award Ceremony</td>\n    <td>Certificate Presentation &amp; Wrap up</td>\n  </tr>\n  <tr>\n    <td>16:00 - 18:00</td>\n    <td>Dinner &amp; Networking</td>\n    <td></td>\n  </tr>\n</table>\n<p>💡 We look forward to your active participation and brilliant presentations!</p>\n<p><br></p>\n<p>Thank you 😊</p>"
+    },
     {
       "id": 4,
       "icon": "icon_announced.png",
@@ -37,15 +46,6 @@
       "date": "April 29, 2026",
       "author": "Program Coordinator",
       "content": "<p>Dear Participants,</p>\n<p>Following today’s lecture, we are pleased to announce your <strong>first assignment</strong>.</p>\n<p><br></p>\n<h4 class=\"ann-h\"><strong>1. Assignment Overview</strong></h4>\n<p>Identify a <strong>Business Opportunity</strong> within the context of Laos and develop it into a concrete <strong>Business Concept</strong>.</p>\n<p><br></p>\n<h4 class=\"ann-h\"><strong>2. Key Guidelines</strong></h4>\n<p>When brainstorming your business idea, consider the following perspectives:</p>\n<ul><li><strong>Market &amp; Industry Analysis:</strong> Which industries show growth potential in the current Laotian market?</li><li><strong>Problem-Solving:</strong> What specific inconveniences or existing problems do people in Laos face, and how can they be solved?</li><li><strong>Demographics &amp; Trends:</strong> What opportunities arise from changes in Laos' population structure or new lifestyle trends?</li><li><strong>Personal Network &amp; Information:</strong> How can you leverage your professional networks or unique information/resources?</li></ul>\n<p><br></p>\n<h4 class=\"ann-h\"><strong>3. Format and Length</strong></h4>\n<ul><li><strong>Format:</strong> MS Word</li><li><strong>Length:</strong> Approximately <strong>2 pages</strong> (A4 size)</li></ul>\n<p><br></p>\n<h4 class=\"ann-h\"><strong>4. Submission Details</strong></h4>\n<ul><li><strong>Submission Deadline:</strong> <strong>By this Sunday, May 3rd, 2026</strong></li><li><strong>To:</strong> bchoi@hufs.ac.kr</li><li><strong>Cc (Carbon Copy):</strong> seongeun38@kookmin.ac.kr</li><li><strong>Note:</strong> Your idea can be changed or modified at any time throughout the course. The primary goal is to start the journey with <strong>&quot;your own idea&quot;</strong> rather than producing a perfect final product from the start.</li></ul>"
-    },
-    {
-      "id": 1,
-      "icon": "icon_announce.png",
-      "emoji": "📢",
-      "title": "Grand Final Pitching & Completion Ceremony",
-      "date": "July 22, 2026",
-      "author": "Program Coordinator",
-      "content": "<p>Hello everyone!</p>\n<p>We are pleased to announce the <strong>Grand Final Pitching &amp; Completion Ceremony</strong> for the Kauffman FastTrac Certificate Program.</p>\n<p>This ceremony will be a meaningful occasion where <strong>you will present the final outcomes of your projects</strong> developed throughout the program, receive valuable feedback from our professors, and reflect on the achievements of your training.</p>\n<p>Please join us to celebrate your hard work and successful completion of the program!</p>\n<p><br></p>\n<h4 class=\"ann-h\">📌 Event Overview</h4>\n<ul><li><strong>Event Name:</strong> Grand Final Pitching &amp; Completion Ceremony</li><li><strong>Date &amp; Time:</strong> Monday, July 27, 2026 / 14:00 – 16:00</li><li><strong>Location:</strong> Kookmin University Campus Town(<a href=\"https://naver.me/FK5vMSy2\" target=\"_blank\" rel=\"noopener noreferrer\">https://naver.me/FK5vMSy2</a>)</li></ul>\n<p><br></p>\n<p>🕒 Program Schedule</p>\n<table class=\"ann-table\">\n  <tr>\n    <td><strong>Time</strong></td>\n    <td><strong>Agenda</strong></td>\n    <td>Details</td>\n  </tr>\n  <tr>\n    <td>14:00 - 15:00</td>\n    <td>Grand Final Pitching</td>\n    <td>Trainee Project Presentations</td>\n  </tr>\n  <tr>\n    <td>15:00 - 15:30</td>\n    <td>Reflection &amp; Feedback</td>\n    <td>Faculty Feedback &amp; Program Review</td>\n  </tr>\n  <tr>\n    <td>15:30 - 16:00</td>\n    <td>Certificate Award Ceremony</td>\n    <td>Certificate Presentation &amp; Wrap up</td>\n  </tr>\n  <tr>\n    <td>16:00 - 18:00</td>\n    <td>Dinner &amp; Networking</td>\n    <td></td>\n  </tr>\n</table>\n<p>💡 We look forward to your active participation and brilliant presentations!</p>\n<p><br></p>\n<p>Thank you 😊</p>"
     }
   ]
 }
