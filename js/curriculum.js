@@ -382,13 +382,6 @@ const CURRICULUM_DATA = {
             title: 'Finalizing the Business Plan',
             desc: 'This final chapter guides you through assembling your business plan, ensuring it is clear and professional, and defining the strategic next steps to turn your vision into reality.',
           },
-          {
-            type: 'fieldtrip',
-            date: 'Jul 23',
-            title: '',
-            location: '',
-            desc: '',
-          },
         ],
       },
       {

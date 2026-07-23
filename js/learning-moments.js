@@ -15,6 +15,49 @@ const events = [
   {
     id: '',
     title: 'PEV Lecture & Project',
+    date: 'July 23, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260723_5.jpeg',
+    photos: [
+      'photo/20260723_1.jpeg',
+      'photo/20260723_2.jpeg',
+      'photo/20260723_3.jpeg',
+      'photo/20260723_4.jpeg',
+      'photo/20260723_5.jpeg'
+    ]
+  },
+  {
+    id: '',
+    title: 'KMU Student Startup Pitch & Feedback',
+    date: 'July 21, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260721_2.jpeg',
+    photos: [
+      'photo/20260721_1.jpeg',
+      'photo/20260721_2.jpeg',
+      'photo/20260721_3.jpeg',
+      'photo/20260721_4.jpeg',
+      'photo/20260721_5.jpeg'
+    ]
+  },
+  {
+    id: '',
+    title: 'PEV Lecture & Project',
+    date: 'July 20, 2026',
+    location: 'KMU, Classroom 215',
+    cover: 'photo/20260720_4.jpeg',
+    photos: [
+      'photo/20260720_1.jpeg',
+      'photo/20260720_2.jpeg',
+      'photo/20260720_3.jpeg',
+      'photo/20260720_4.jpeg',
+      'photo/20260720_5.jpeg',
+      'photo/20260720_6.jpeg',
+    ]
+  },
+  {
+    id: '',
+    title: 'PEV Lecture & Project',
     date: 'July 15, 2026',
     location: 'KMU, Classroom 215',
     cover: '',
