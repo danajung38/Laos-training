@@ -14,6 +14,49 @@
 const events = [
   {
     id: '',
+    title: 'Farewell Lunch with Professors on the Final Day',
+    date: 'July 31, 2026',
+    location: 'Restaurant in Hyehwa',
+    cover: 'photo/20260731_2.jpeg',
+    photos: [
+      'photo/20260731_1.jpeg',
+      'photo/20260731_2.jpeg'
+    ]
+  },
+  {
+    id: '',
+    title: 'Grand Final Pitching & Completion Ceremony',
+    date: 'July 27, 2026',
+    location: 'KMU Campus Town',
+    cover: 'photo/20260727_13.jpeg',
+    photos: [
+      'photo/20260727_8.jpeg',
+      'photo/20260727_9.jpeg',
+      'photo/20260727_10.jpeg',
+      'photo/20260727_11.jpeg',
+      'photo/20260727_12.jpeg',
+      'photo/20260727_13.jpeg',
+      'photo/20260727_14.jpeg'
+    ]
+  },
+  {
+    id: '',
+    title: 'Grand Final Pitching & Completion Ceremony',
+    date: 'July 27, 2026',
+    location: 'KMU Campus Town',
+    cover: '',
+    photos: [
+      'photo/20260727_1.jpeg',
+      'photo/20260727_1.jpeg',
+      'photo/20260727_3.jpeg',
+      'photo/20260727_4.jpeg',
+      'photo/20260727_5.jpeg',
+      'photo/20260727_6.jpeg',
+      'photo/20260727_7.jpeg'
+    ]
+  },
+  {
+    id: '',
     title: 'PEV Lecture & Project',
     date: 'July 23, 2026',
     location: 'KMU, Classroom 215',
