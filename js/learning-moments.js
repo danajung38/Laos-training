@@ -14,6 +14,33 @@
 const events = [
   {
     id: '',
+    title: 'Action Plan: Final Presentation & Follow-up',
+    date: 'Aug 10, 2026',
+    location: 'online(Zoom)',
+    cover: 'photo/20260810_4.png',
+    photos: [
+      'photo/20260810_1.png',
+      'photo/20260810_2.png',
+      'photo/20260810_3.png',
+      'photo/20260810_4.png'
+    ]
+  },
+  {
+    id: '',
+    title: 'Action Plan: Online Action Plan Mentoring',
+    date: 'Aug 3, 2026',
+    location: 'online(Zoom)',
+    cover: 'photo/20260803_3.png',
+    photos: [
+      'photo/20260803_1.png',
+      'photo/20260803_2.png',
+      'photo/20260803_3.png',
+      'photo/20260803_4.png',
+      'photo/20260803_5.png'
+    ]
+  },
+  {
+    id: '',
     title: 'Farewell Lunch with Professors on the Final Day',
     date: 'July 31, 2026',
     location: 'Restaurant in Hyehwa',
